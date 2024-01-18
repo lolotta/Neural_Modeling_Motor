@@ -309,6 +309,7 @@ if not test_mode:
     data = {'subject_name': [subject_name] * len(string_trials),
             'target_mode': [target_mode] * len(string_trials),
             'perturbation_type': [perturbation_type] * len(string_trials),
+            'trial_number': np.arange(1, len(string_trials)+1),
             'trial_name' : string_trials,
             'target_angles': target_angles,
             'circle_angles': circle_angles,
@@ -317,8 +318,7 @@ if not test_mode:
     # Create a dataframe from the dictionary
     df = pd.DataFrame(data)
     # Save dataframe to CSV
-    df.to_csv('data.csv', index=False)
-    
+    df.to_csv('error_angles_{}.csv'.format(subject_name), header=True, index=False)
     
     # TASK 2 GENERATE A BETTER PLOT
     # Load data from CSV file
