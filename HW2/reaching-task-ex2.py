@@ -7,6 +7,8 @@ import matplotlib.pyplot as plt
 import csv
 from datetime import datetime
 
+# Subject name
+subject_name = "Lotta"
 # Game parameters
 SCREEN_X, SCREEN_Y = 1920, 1080 # your screen resolution
 WIDTH, HEIGHT = SCREEN_X // 1.25  , SCREEN_Y // 1.25 # be aware of monitor scaling on windows (150%)
@@ -17,6 +19,7 @@ MASK_RADIUS = 0.75 * TARGET_RADIUS
 ATTEMPTS_LIMIT = 200
 START_POSITION = (WIDTH // 2, HEIGHT // 2)
 START_ANGLE = 0
+NEXT_ANGLES = [20,40,30,60]
 PERTURBATION_ANGLE= 30
 TIME_LIMIT = 1000 # time limit in ms
 
