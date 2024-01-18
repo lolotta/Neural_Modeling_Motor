@@ -1,12 +1,13 @@
 import numpy as np
 import seaborn as sns
+import pandas as pd
 
 """ Load the data from the csv file and perform the analysis."""
 df = pd.read_csv('data.csv')
 
 """ Calulate the motor varibility or the std for each baseline and each trial."""
 MV = df[df['trial_name'] == 'Basline']['error_angles'].std()
-adaptation_rate = np.max(100 * MV / df[df['trial_name'] != 'Basline']['error_angles'], 100)
+adaptation_rate = np.max(100 * (MV / df[df['trial_name'] != 'Basline']['error_angles'] -1), 0)
 trials = df[df['trial_name'] != 'Basline'].trial_name
 
 """ Plot the adaptation rate but not for the baseline."""
