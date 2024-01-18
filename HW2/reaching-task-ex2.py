@@ -16,7 +16,7 @@ CIRCLE_SIZE = 20
 TARGET_SIZE = CIRCLE_SIZE
 TARGET_RADIUS = 300
 MASK_RADIUS = 0.75 * TARGET_RADIUS
-ATTEMPTS_LIMIT = 200
+ATTEMPTS_LIMIT = 320
 START_POSITION = (WIDTH // 2, HEIGHT // 2)
 START_ANGLE = 0
 NEXT_ANGLES = [20,40,30,60]
@@ -121,12 +121,12 @@ while running:
 
     if exp_setup == 'perturbation_types':        
         # Design experiment perturbation types(HW1)
-        a1, a2, a3, a4, a5, a6 = 0, 40, 80, 120, 160, ATTEMPTS_LIMIT
+        a1, a2, a3, a4, a5, a6, a7, a8, a9, a10 = 0, 20, 60, 100, 140, 180, 220, 260, 300, ATTEMPTS_LIMIT
         if attempts == a1:
             pertubation_mode = False
         elif attempts == a2:
             pertubation_mode = True
-            pertubation_type = 'gradual' 
+            pertubation_type = 'sudden' 
         elif attempts == a3:
             pertubation_mode = False
         elif attempts == a4:
@@ -134,18 +134,31 @@ while running:
             pertubation_type = 'sudden'         
         elif attempts == a5:
             pertubation_mode = False
+        elif attempts == a6:
+            pertubation_mode = True
+            pertubation_type = 'sudden'         
+
+        elif attempts == a7:
+            pertubation_mode = False
+        elif attempts == a8:
+            pertubation_mode = True
+            pertubation_type = 'sudden'   
+        elif attempts == a9:
+            pertubation_mode = False      
+
         elif attempts >= ATTEMPTS_LIMIT:
             running = False 
             
-        collect_attempts = [a1, a2, a3, a4, a5, a6]
+        collect_attempts = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10]
         """ Numbers of attempts for each perturbation type """
         number_types = np.array(collect_attempts[1:]) - np.array(collect_attempts[:-1])
-        string_attempts = ['Baseline', 'Gradual Perturbation', 'Baseline', 'Sudden Perturbation', 'Random Perturbation']               
+        string_attempts = ['No Perturbation', 'Sudden Perturbation', 'No Perturbation', 'Sudden Perturbation','No Perturbation', 'Sudden Perturbation','No Perturbation', 'Sudden Perturbation','No Perturbation', 'Sudden Perturbation']               
 
     elif exp_setup == 'generalization':
-        #TASK 1: DESIGN YOUR OWN EXPERIMENT (HW2_A OR HW2_B)        
+        #TASK 1: DESIGN YOUR OWN EXPERIMENT (HW2_A OR HW2_B)      
+        # TODO  
         # Design experiment A
-        if attempts == 1:
+        if attempts == a1:
             perturbation_mode = False
             sequence_target = 45 # choose new target locations
         #...
