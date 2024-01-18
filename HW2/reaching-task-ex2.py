@@ -139,7 +139,7 @@ while running:
             
         collect_attempts = [a1, a2, a3, a4, a5, a6]
         """ Numbers of attempts for each perturbation type """
-        number_types = [a2-a1, a3-a2, a4-a3, a5-a4, a6-a5]
+        number_types = [np.array(collect_attempts[1:]) - np.array(collect_attempts[:-1])]
         string_attempts = ['Baseline', 'Gradual Perturbation', 'Baseline', 'Sudden Perturbation', 'Random Perturbation']               
 
     elif exp_setup == 'generalization':
