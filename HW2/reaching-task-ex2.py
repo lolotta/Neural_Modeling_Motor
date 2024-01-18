@@ -292,7 +292,21 @@ pygame.quit()
 ## TASK 1, SAVE IMPORTANT VARIABLES IN .CSV 
 
 # Save important variables in CSV file if test_mode==False:
-
+import pandas as pd
+if not test_mode:
+    # Create a dictionary containing all variables
+    data = {'subject_name': subject_name,
+            'target_mode': target_mode,
+            'perturbation_type': perturbation_type,
+            'target_angles': target_angles,
+            'circle_angles': circle_angles,
+            'error_angles': error_angles
+            }
+    # Create a dataframe from the dictionary
+    df = pd.DataFrame(data)
+    # Save dataframe to CSV
+    df.to_csv('data.csv', index=False)
+    
     
     # TASK 2 GENERATE A BETTER PLOT
     # Load data from CSV file
