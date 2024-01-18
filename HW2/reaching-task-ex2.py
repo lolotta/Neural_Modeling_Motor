@@ -139,7 +139,7 @@ while running:
             
         collect_attempts = [a1, a2, a3, a4, a5, a6]
         """ Numbers of attempts for each perturbation type """
-        number_types = [np.array(collect_attempts[1:]) - np.array(collect_attempts[:-1])]
+        number_types = np.array(collect_attempts[1:]) - np.array(collect_attempts[:-1])
         string_attempts = ['Baseline', 'Gradual Perturbation', 'Baseline', 'Sudden Perturbation', 'Random Perturbation']               
 
     elif exp_setup == 'generalization':
@@ -301,13 +301,15 @@ pygame.quit()
 import pandas as pd
 if not test_mode:
     # Create a dictionary containing all variables
-    #%%
-    trial_name = [[string_attempts[idx]] * i for idx, i in enumerate(number_types)]
-    #%%
+    """ Multiple attempts for each perturbation type"""
+    string_trials = []
+    for trial, number in zip(string_attempts, number_types):
+        string_trials += [[trial] * number]
+        
     data = {'subject_name': subject_name,
             'target_mode': target_mode,
             'perturbation_type': perturbation_type,
-            'trial_name' : trial_name,
+            'trial_name' : string_trials,
             'target_angles': target_angles,
             'circle_angles': circle_angles,
             'error_angles': error_angles
