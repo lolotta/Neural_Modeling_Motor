@@ -381,13 +381,15 @@ import pandas as pd
 a1, a2, a3, a4, a5, a6 = 0, 40, 80, 120, 160, ATTEMPTS_LIMIT
 collect_attempts = [a1, a2, a3, a4, a5, a6]
 number_types = [np.array(collect_attempts[1:]) - np.array(collect_attempts[:-1])]
-trial_name = [[string_attempts[idx]] * i for idx, i in enumerate(number_types)]
 
-data = {'subject_name': subject_name,
-        'target_mode': target_mode,
-        'perturbation_type': "sudden",
-        'trial_name' : trial_name,
-        'target_angles': 0,
+string_trials = []
+for trial, number in zip(string_attempts, number_types):
+    string_trials += [trial] * number
+data = {'subject_name': [subject_name] * len(string_trials),
+        'target_mode': [target_mode] * len(string_trials),
+        'perturbation_type': ["sudden"] * len(string_trials),
+        'trial_name' : string_trials,
+        'target_angles': [0] * len(string_trials),
         'circle_angles': error_angles,
         'error_angles': error_angles
         }
