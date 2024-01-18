@@ -121,20 +121,26 @@ while running:
 
     if exp_setup == 'perturbation_types':        
         # Design experiment perturbation types(HW1)
-        if attempts == 1:
+        a1, a2, a3, a4, a5, a6 = 0, 40, 80, 120, 160, ATTEMPTS_LIMIT
+        if attempts == a1:
             pertubation_mode = False
-        elif attempts == 40:
+        elif attempts == a2:
             pertubation_mode = True
             pertubation_type = 'gradual' 
-        elif attempts == 80:
+        elif attempts == a3:
             pertubation_mode = False
-        elif attempts == 120:
+        elif attempts == a4:
             pertubation_mode = True    
             pertubation_type = 'sudden'         
-        elif attempts == 160:
+        elif attempts == a5:
             pertubation_mode = False
         elif attempts >= ATTEMPTS_LIMIT:
-            running = False                
+            running = False 
+            
+        collect_attempts = [a1, a2, a3, a4, a5, a6]
+        """ Numbers of attempts for each perturbation type """
+        number_types = [a2-a1, a3-a2, a4-a3, a5-a4, a6-a5]
+        string_attempts = ['Baseline', 'Gradual Perturbation', 'Baseline', 'Sudden Perturbation', 'Random Perturbation']               
 
     elif exp_setup == 'generalization':
         #TASK 1: DESIGN YOUR OWN EXPERIMENT (HW2_A OR HW2_B)        
@@ -295,9 +301,13 @@ pygame.quit()
 import pandas as pd
 if not test_mode:
     # Create a dictionary containing all variables
+    #%%
+    trial_name = [[string_attempts[idx]] * i for idx, i in enumerate(number_types)]
+    #%%
     data = {'subject_name': subject_name,
             'target_mode': target_mode,
             'perturbation_type': perturbation_type,
+            'trial_name' : trial_name,
             'target_angles': target_angles,
             'circle_angles': circle_angles,
             'error_angles': error_angles
