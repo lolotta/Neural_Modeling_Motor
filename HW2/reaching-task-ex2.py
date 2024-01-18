@@ -304,11 +304,11 @@ if not test_mode:
     """ Multiple attempts for each perturbation type"""
     string_trials = []
     for trial, number in zip(string_attempts, number_types):
-        string_trials += [[trial] * number]
+        string_trials += [trial] * number
         
-    data = {'subject_name': subject_name,
-            'target_mode': target_mode,
-            'perturbation_type': perturbation_type,
+    data = {'subject_name': [subject_name] * len(string_trials),
+            'target_mode': [target_mode] * len(string_trials),
+            'perturbation_type': [perturbation_type] * len(string_trials),
             'trial_name' : string_trials,
             'target_angles': target_angles,
             'circle_angles': circle_angles,
