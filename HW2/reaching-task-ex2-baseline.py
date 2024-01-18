@@ -378,13 +378,23 @@ pygame.quit()
 
 ## TASK 2, CALCULATE, PLOT AND SAVE ERRORS from error_angles
 import pandas as pd
-df0 = pd.DataFrame({'attempts': range(attempts), 'error_angles': error_angles})
-df0_0 = pd.DataFrame({'attempts': range(attempts), 'error_distances': error_distances})
+a1, a2, a3, a4, a5, a6 = 0, 40, 80, 120, 160, ATTEMPTS_LIMIT
+collect_attempts = [a1, a2, a3, a4, a5, a6]
+number_types = [np.array(collect_attempts[1:]) - np.array(collect_attempts[:-1])]
+trial_name = [[string_attempts[idx]] * i for idx, i in enumerate(number_types)]
 
+data = {'subject_name': subject_name,
+        'target_mode': target_mode,
+        'perturbation_type': "sudden",
+        'trial_name' : trial_name,
+        'target_angles': 0,
+        'circle_angles': error_angles,
+        'error_angles': error_angles
+        }
 
 """ Write the attempts and error_angles to a csv file. Write also the mean and CI for each pertubation_types to a csv file."""
-df0.index.name = 'index'
-df0.to_csv('error_angles_baseline_trial_{}_{}.csv'.format(trial, subject_name), header=True, index=True,)
+
+data.to_csv('error_angles_baseline_trial_{}_{}.csv'.format(trial, subject_name), header=True, index=True,)
 
 
 sys.exit()
