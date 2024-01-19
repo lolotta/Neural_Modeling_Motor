@@ -155,11 +155,10 @@ while running:
             
         """ Numbers of attempts for each perturbation type """
         number_attempts = np.array(trial_number[1:]) - np.array(trial_number[:-1])
-        string_attempts = ['No Perturbation', 'Sudden Perturbation', 'No Perturbation', 'Sudden Perturbation','No Perturbation', 'Sudden Perturbation','No Perturbation', 'Sudden Perturbation','No Perturbation', 'Sudden Perturbation']               
+        string_attempts = ['No Perturbation', 'Sudden Perturbation'] * 5             
 
     elif exp_setup == 'generalization':
         #TASK 1: DESIGN YOUR OWN EXPERIMENT (HW2_A OR HW2_B)      
-        # TODO  
         # Design experiment A
         
         trial_number = [0, 20, 60, 80,
