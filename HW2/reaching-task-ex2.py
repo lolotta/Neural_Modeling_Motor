@@ -8,10 +8,10 @@ import csv
 from datetime import datetime
 
 # Subject name
-subject_name = "Lotta"
+subject_name = "Flo"
 # Game parameters
-SCREEN_X, SCREEN_Y = 1920, 1080 # your screen resolution
-WIDTH, HEIGHT = SCREEN_X // 1.25  , SCREEN_Y // 1.25 # be aware of monitor scaling on windows (150%)
+SCREEN_X, SCREEN_Y = 3840, 2160 # your screen resolution
+WIDTH, HEIGHT = SCREEN_X // 2.5  , SCREEN_Y // 2.5 # be aware of monitor scaling on windows (150%)
 CIRCLE_SIZE = 20
 TARGET_SIZE = CIRCLE_SIZE
 TARGET_RADIUS = 300
@@ -34,7 +34,7 @@ BLUE = (0, 0, 255)
 pygame.init()
 
 # Set up the display
-test_mode= True # test_mode=False for recording of unbiased subjects 
+test_mode= False # test_mode=False for recording of unbiased subjects 
 if test_mode:
     screen = pygame.display.set_mode((WIDTH-50, HEIGHT-50))
 else:
@@ -69,9 +69,10 @@ perturbation_rand=random.uniform(-math.pi/4, +math.pi/4)
 error_angles = [] 
 target_angles = []
 circle_angles = []
+target_pos = []
 
 #Choose experimental setup
-exp_setup='generalization' #'perturbation_types' (HW1),'generalization' (HW2,A),'interference' (HW2,B)
+exp_setup='perturbation_types' #'perturbation_types' (HW1),'generalization' (HW2,A),'interference' (HW2,B)
 
 # Function to generate a new target position
 def generate_target_position():
@@ -121,37 +122,41 @@ while running:
 
     if exp_setup == 'perturbation_types':        
         # Design experiment perturbation types(HW1)
-        a1, a2, a3, a4, a5, a6, a7, a8, a9, a10 = 0, 20, 60, 100, 140, 180, 220, 260, 300, ATTEMPTS_LIMIT
-        if attempts == a1:
+        trial_number = [0, 20, 60, 100, 140, 180, 220, 260, 300, 320]
+        
+        #if test_mode:
+        trial_number = (np.array(trial_number) // 10).tolist()
+        print(trial_number)
+
+        if attempts == trial_number[0]:
             pertubation_mode = False
-        elif attempts == a2:
+        elif attempts == trial_number[1]:
             pertubation_mode = True
             pertubation_type = 'sudden' 
-        elif attempts == a3:
+        elif attempts == trial_number[2]:
             pertubation_mode = False
-        elif attempts == a4:
+        elif attempts == trial_number[3]:
             pertubation_mode = True    
             pertubation_type = 'sudden'         
-        elif attempts == a5:
+        elif attempts == trial_number[4]:
             pertubation_mode = False
-        elif attempts == a6:
+        elif attempts == trial_number[5]:
             pertubation_mode = True
             pertubation_type = 'sudden'         
 
-        elif attempts == a7:
+        elif attempts == trial_number[6]:
             pertubation_mode = False
-        elif attempts == a8:
+        elif attempts == trial_number[7]:
             pertubation_mode = True
             pertubation_type = 'sudden'   
-        elif attempts == a9:
+        elif attempts == trial_number[8]:
             pertubation_mode = False      
 
-        elif attempts >= ATTEMPTS_LIMIT:
+        elif attempts >= trial_number[9]:
             running = False 
             
-        collect_attempts = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10]
         """ Numbers of attempts for each perturbation type """
-        number_types = np.array(collect_attempts[1:]) - np.array(collect_attempts[:-1])
+        number_attempts = np.array(trial_number[1:]) - np.array(trial_number[:-1])
         string_attempts = ['No Perturbation', 'Sudden Perturbation', 'No Perturbation', 'Sudden Perturbation','No Perturbation', 'Sudden Perturbation','No Perturbation', 'Sudden Perturbation','No Perturbation', 'Sudden Perturbation']               
 
     elif exp_setup == 'generalization':
@@ -212,9 +217,15 @@ while running:
         # CALCULATE AND SAVE ERRORS between target and circle end position for a hit
         target_angle = math.atan2(new_target[1] - START_POSITION[1], new_target[0] - START_POSITION[0])    
         circle_end_angle = math.atan2(circle_pos[1] - START_POSITION[1], circle_pos[0] - START_POSITION[0])
-        error_angle = circle_end_angle - target_angle
+        
+        if move_faster:
+            error_angle = np.nan
+        else:
+            error_angle = circle_end_angle - target_angle
+            
+        target_pos.append(target_angle)   
+        
         error_angles.append(error_angle)
-
         new_target = None  # Set target to None to indicate hit
         start_time = 0  # Reset start_time after hitting the target
         if perturbation_type == 'gradual' and perturbation_mode:   
@@ -227,7 +238,13 @@ while running:
         # CALCULATE AND SAVE ERRORS between target and circle end position for a miss
         target_angle = math.atan2(new_target[1] - START_POSITION[1], new_target[0] - START_POSITION[0])    
         circle_end_angle = math.atan2(circle_pos[1] - START_POSITION[1], circle_pos[0] - START_POSITION[0])
-        error_angle = circle_end_angle - target_angle
+        
+        if move_faster:
+            error_angle = np.nan
+        else:
+            error_angle = circle_end_angle - target_angle
+        
+        target_pos.append(target_angle)
         target_angles.append(target_angle)
         circle_angles.append(circle_end_angle)
         error_angles.append(error_angle)
@@ -316,7 +333,7 @@ if not test_mode:
     # Create a dictionary containing all variables
     """ Multiple attempts for each perturbation type"""
     string_trials = []
-    for trial, number in zip(string_attempts, number_types):
+    for trial, number in zip(string_attempts, number_attempts):
         string_trials += [trial] * number
         
     data = {'subject_name': [subject_name] * len(string_trials),
@@ -324,14 +341,14 @@ if not test_mode:
             'perturbation_type': [perturbation_type] * len(string_trials),
             'trial_number': np.arange(1, len(string_trials)+1),
             'trial_name' : string_trials,
-            'target_angles': target_angles,
-            'circle_angles': circle_angles,
+            'target_pos': target_pos,
             'error_angles': error_angles
             }
     # Create a dataframe from the dictionary
     df = pd.DataFrame(data)
     # Save dataframe to CSV
-    df.to_csv('error_angles_{}.csv'.format(subject_name), header=True, index=False)
+    df.to_csv('HW2/error_angles_{}.csv'.format(subject_name), header=True, index=False, 
+              na_rep=np.NaN)
     
     # TASK 2 GENERATE A BETTER PLOT
     # Load data from CSV file

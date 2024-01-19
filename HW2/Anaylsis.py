@@ -3,7 +3,7 @@ import seaborn as sns
 import pandas as pd
 
 """ Load the data from the csv file and perform the analysis."""
-df = pd.read_csv('data.csv')
+df = pd.read_csv('error_angles_Flo.csv')
 
 """ Calulate the motor varibility or the std for each baseline and each trial."""
 MV = df[df['trial_name'] == 'Basline']['error_angles'].std()
