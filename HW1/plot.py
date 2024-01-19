@@ -9,7 +9,7 @@ subject_name = "Lotta"
 attempts = 200
 import os
 print(os.getcwd())
-data = pd.read_csv("HW5/error_angles_"+ subject_name + ".csv")
+data = pd.read_csv("HW1/error_angles_"+ subject_name + ".csv")
 
 g0 = sns.scatterplot(data = data, x = 'attempts', y = 'error_angles') 
 g0 = sns.lineplot(data = data, x = 'attempts', y = 'error_angles')

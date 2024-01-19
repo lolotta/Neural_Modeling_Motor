@@ -8,10 +8,16 @@ import csv
 from datetime import datetime
 
 # Subject name
-subject_name = "Flo"
+subject_name = "Lotta"
 # Game parameters
-SCREEN_X, SCREEN_Y = 3840, 2160 # your screen resolution
-WIDTH, HEIGHT = SCREEN_X // 2.5  , SCREEN_Y // 2.5 # be aware of monitor scaling on windows (150%)
+experimenter = "Lotta"
+if experimenter == "Lotta":
+    SCREEN_X, SCREEN_Y = 1920, 1080 # your screen resolution
+    WIDTH, HEIGHT = SCREEN_X // 1.25  , SCREEN_Y // 1.25 # be aware of monitor scaling on windows (150%)
+
+elif experimenter == "Flo":
+    SCREEN_X, SCREEN_Y = 3840, 2160 # your screen resolution
+    WIDTH, HEIGHT = SCREEN_X // 2.5  , SCREEN_Y // 2.5 # be aware of monitor scaling on windows (150%)
 CIRCLE_SIZE = 20
 TARGET_SIZE = CIRCLE_SIZE
 TARGET_RADIUS = 300
@@ -166,7 +172,7 @@ while running:
                         180, 220, 240,
                         260, 300, 320]
         
-        trial_number = (np.array(trial_number) // 10).tolist()
+        #trial_number = (np.array(trial_number) // 10).tolist()
         
         """ Block 0 """
         if attempts == trial_number[0]:
@@ -221,7 +227,7 @@ while running:
         
         """ Numbers of attempts for each perturbation type """
         number_attempts = np.array(trial_number[1:]) - np.array(trial_number[:-1])
-        string_attempts = ['Baseline', 'Sudden Perturbation', 'Aftereffect'] * 4  
+        string_attempts = ['No Perturbation', 'Sudden Perturbation', 'Aftereffect'] * 4  
         
 
     elif exp_setup == 'interference':

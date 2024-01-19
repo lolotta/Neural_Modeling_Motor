@@ -120,7 +120,7 @@ while running:
         pertubation_mode = False
     elif attempts == a2:
         pertubation_mode = True
-        pertubation_type = 'gradual' 
+        pertubation_type = 'sudden' 
     elif attempts == a3:
         pertubation_mode = False
     elif attempts == a4:
@@ -396,7 +396,7 @@ data = {'subject_name': [subject_name] * len(string_trials),
 
 """ Write the attempts and error_angles to a csv file. Write also the mean and CI for each pertubation_types to a csv file."""
 
-data.to_csv('error_angles_baseline_trial_{}_{}.csv'.format(trial, subject_name), header=True, index=True,)
+data.to_csv('HW2/error_angles_baseline_trial_{}_{}.csv'.format(trial, subject_name), header=True, index=True,)
 
 
 sys.exit()
