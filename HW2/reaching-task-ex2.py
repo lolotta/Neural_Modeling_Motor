@@ -222,7 +222,7 @@ while running:
         
         """ Numbers of attempts for each perturbation type """
         number_attempts = np.array(trial_number[1:]) - np.array(trial_number[:-1])
-        string_attempts = ['Baseline', 'Sudden Perturbation', 'Baseline'] * 4  
+        string_attempts = ['Baseline', 'Sudden Perturbation', 'Aftereffect'] * 4  
         
 
     elif exp_setup == 'interference':
@@ -421,7 +421,6 @@ if not test_mode:
                 'error_angles': error_angles
                 }
         
-    
     # TASK 2 GENERATE A BETTER PLOT
     # Load data from CSV file
 
