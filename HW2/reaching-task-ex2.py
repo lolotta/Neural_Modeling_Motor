@@ -223,9 +223,7 @@ while running:
         """ Numbers of attempts for each perturbation type """
         number_attempts = np.array(trial_number[1:]) - np.array(trial_number[:-1])
         string_attempts = ['Baseline', 'Sudden Perturbation', 'Baseline'] * 4  
-          
-        Collected_angels = [NEXT_ANGLES[i] for i in range(len(NEXT_ANGLES)) for j in range(number_attempts[i])]
-
+        
 
     elif exp_setup == 'interference':
         # Design experiment B
@@ -396,6 +394,14 @@ if not test_mode:
         string_trials += [trial] * number
     
     if NEXT_ANGLES != []:
+           
+        """ Loop in three-steps through the numbers of attempts for each ANGEL"""
+        Collected_angels = []
+        for i in range(len(NEXT_ANGLES)):
+            Collected_angels += [NEXT_ANGLES[i]] * np.sum((number_attempts[i*3:(i*3)+3]))
+        
+        print(len(Collected_angels))
+      
         
         data = {'subject_name': [subject_name] * len(string_trials),
                 'target_mode': [target_mode] * len(string_trials),
