@@ -388,6 +388,7 @@ pygame.quit()
 import pandas as pd
 if not test_mode:
     # Create a dictionary containing all variables
+    
     """ Multiple attempts for each perturbation type"""
     string_trials = []
     for trial, number in zip(string_attempts, number_attempts):
@@ -399,8 +400,6 @@ if not test_mode:
         Collected_angels = []
         for i in range(len(NEXT_ANGLES)):
             Collected_angels += [NEXT_ANGLES[i]] * np.sum((number_attempts[i*3:(i*3)+3]))
-        
-        print(len(Collected_angels))
       
         
         data = {'subject_name': [subject_name] * len(string_trials),
@@ -422,17 +421,17 @@ if not test_mode:
                 'error_angles': error_angles
                 }
         
-    # Create a dataframe from the dictionary
-    df = pd.DataFrame(data)
-    # Save dataframe to CSV
-    df.to_csv('HW2/error_angles_{}.csv'.format(subject_name), header=True, index=False, 
-              na_rep=np.NaN)
     
     # TASK 2 GENERATE A BETTER PLOT
     # Load data from CSV file
 
     # Extract data for plotting
 
+    # Create a dataframe from the dictionary
+    df = pd.DataFrame(data)
+    # Save dataframe to CSV
+    df.to_csv('HW2/error_angles_{}.csv'.format(subject_name), header=True, index=False, 
+              na_rep=np.NaN)
 
 
 sys.exit()
