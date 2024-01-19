@@ -72,7 +72,7 @@ circle_angles = []
 target_pos = []
 
 #Choose experimental setup
-exp_setup='perturbation_types' #'perturbation_types' (HW1),'generalization' (HW2,A),'interference' (HW2,B)
+exp_setup='generalization' #'perturbation_types' (HW1),'generalization' (HW2,A),'interference' (HW2,B)
 
 # Function to generate a new target position
 def generate_target_position():
@@ -124,9 +124,8 @@ while running:
         # Design experiment perturbation types(HW1)
         trial_number = [0, 20, 60, 100, 140, 180, 220, 260, 300, 320]
         
-        #if test_mode:
-        trial_number = (np.array(trial_number) // 10).tolist()
-        print(trial_number)
+        #trial_number = (np.array(trial_number) // 10).tolist()
+
 
         if attempts == trial_number[0]:
             pertubation_mode = False
@@ -143,7 +142,6 @@ while running:
         elif attempts == trial_number[5]:
             pertubation_mode = True
             pertubation_type = 'sudden'         
-
         elif attempts == trial_number[6]:
             pertubation_mode = False
         elif attempts == trial_number[7]:
@@ -163,10 +161,71 @@ while running:
         #TASK 1: DESIGN YOUR OWN EXPERIMENT (HW2_A OR HW2_B)      
         # TODO  
         # Design experiment A
-        if attempts == a1:
+        
+        trial_number = [0, 20, 60, 80,
+                        100, 140, 160,
+                        180, 220, 240,
+                        260, 300, 320]
+        
+        trial_number = (np.array(trial_number) // 10).tolist()
+        
+        """ Block 0 """
+        if attempts == trial_number[0]:
             perturbation_mode = False
-            sequence_target = 45 # choose new target locations
-        #...
+            sequence_target =  NEXT_ANGLES[0]
+        elif attempts == trial_number[1]:
+            perturbation_mode = True
+            perturbation_type = 'sudden'
+            sequence_target =  NEXT_ANGLES[0]
+        elif attempts == trial_number[2]:
+            perturbation_mode = False
+            sequence_target =  NEXT_ANGLES[0]
+            
+            """ Block 1 """
+        elif attempts == trial_number[3]:
+            perturbation_mode = False
+            sequence_target =  NEXT_ANGLES[1]
+        elif attempts == trial_number[4]:
+            perturbation_mode = True
+            perturbation_type = 'sudden'
+            sequence_target =  NEXT_ANGLES[1]
+        elif attempts == trial_number[5]:
+            perturbation_mode = False
+            sequence_target =  NEXT_ANGLES[1]
+            
+            """ Block 2 """
+        elif attempts == trial_number[6]:
+            perturbation_mode = False
+            sequence_target =  NEXT_ANGLES[2]
+        elif attempts == trial_number[7]:
+            perturbation_mode = True
+            perturbation_type = 'sudden'
+            sequence_target =  NEXT_ANGLES[2]
+        elif attempts == trial_number[8]:
+            perturbation_mode = False
+            sequence_target =  NEXT_ANGLES[2]
+                
+            """ Block 3 """
+        elif attempts == trial_number[9]:
+            perturbation_mode = False
+            sequence_target =  NEXT_ANGLES[3]
+        elif attempts == trial_number[10]:
+            perturbation_mode = True
+            perturbation_type = 'sudden'
+            sequence_target =  NEXT_ANGLES[3]
+        elif attempts == trial_number[11]:
+            perturbation_mode = False
+            sequence_target =  NEXT_ANGLES[3]
+        elif attempts >= trial_number[12]:
+            running = False
+            
+        
+        """ Numbers of attempts for each perturbation type """
+        number_attempts = np.array(trial_number[1:]) - np.array(trial_number[:-1])
+        string_attempts = ['Baseline', 'Sudden Perturbation', 'Baseline'] * 4  
+          
+        Collected_angels = [NEXT_ANGLES[i] for i in range(len(NEXT_ANGLES)) for j in range(number_attempts[i])]
+
 
     elif exp_setup == 'interference':
         # Design experiment B
@@ -335,15 +394,28 @@ if not test_mode:
     string_trials = []
     for trial, number in zip(string_attempts, number_attempts):
         string_trials += [trial] * number
+    
+    if NEXT_ANGLES != []:
         
-    data = {'subject_name': [subject_name] * len(string_trials),
-            'target_mode': [target_mode] * len(string_trials),
-            'perturbation_type': [perturbation_type] * len(string_trials),
-            'trial_number': np.arange(1, len(string_trials)+1),
-            'trial_name' : string_trials,
-            'target_pos': target_pos,
-            'error_angles': error_angles
-            }
+        data = {'subject_name': [subject_name] * len(string_trials),
+                'target_mode': [target_mode] * len(string_trials),
+                'perturbation_type': [perturbation_type] * len(string_trials),
+                'trial_number': np.arange(1, len(string_trials)+1),
+                'trial_name' : string_trials,
+                'target_pos': target_pos,
+                'changed_angels': Collected_angels,
+                'error_angles': error_angles
+                }
+    else:
+        data = {'subject_name': [subject_name] * len(string_trials),
+                'target_mode': [target_mode] * len(string_trials),
+                'perturbation_type': [perturbation_type] * len(string_trials),
+                'trial_number': np.arange(1, len(string_trials)+1),
+                'trial_name' : string_trials,
+                'target_pos': target_pos,
+                'error_angles': error_angles
+                }
+        
     # Create a dataframe from the dictionary
     df = pd.DataFrame(data)
     # Save dataframe to CSV
