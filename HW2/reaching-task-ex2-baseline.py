@@ -6,8 +6,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Subject name
-subject_name = "Lotta"
-trial = 1
+subject_name = "Lea"
+session = 2
 # Game parameters
 SCREEN_X, SCREEN_Y = 1920, 1080 # your screen resolution
 WIDTH, HEIGHT = SCREEN_X // 1.25  , SCREEN_Y // 1.25 # be aware of monitor scaling on windows (150%)
@@ -132,7 +132,7 @@ while running:
         running = False        
 
     collect_attempts = [a2, a3, a4, a5, a6]
-    string_attempts = ['No Peturbation', 'Sudden Perturbation 2', 'No Peturbation', 'Sudden Perturbation 2', 'No Peturbation']
+    string_attempts = ['No Peturbation', 'Sudden Perturbation 1', 'No Peturbation', 'Sudden Perturbation 2', 'No Peturbation']
     
     # Hide the mouse cursor
     pygame.mouse.set_visible(False)
@@ -382,12 +382,15 @@ a1, a2, a3, a4, a5, a6 = 0, 40, 80, 120, 160, ATTEMPTS_LIMIT
 collect_attempts = [a1, a2, a3, a4, a5, a6]
 number_types = [np.array(collect_attempts[1:]) - np.array(collect_attempts[:-1])]
 
+number_attempts = np.array(collect_attempts[1:]) - np.array(collect_attempts[:-1])
+
 string_trials = []
-for trial, number in zip(string_attempts, number_types):
+for trial, number in zip(string_attempts, number_attempts):
     string_trials += [trial] * number
 data = {'subject_name': [subject_name] * len(string_trials),
         'target_mode': [target_mode] * len(string_trials),
         'perturbation_type': ["sudden"] * len(string_trials),
+        'trial_number': np.arange(1, len(string_trials)+1),
         'trial_name' : string_trials,
         'target_angles': [0] * len(string_trials),
         'circle_angles': error_angles,
@@ -395,8 +398,8 @@ data = {'subject_name': [subject_name] * len(string_trials),
         }
 
 """ Write the attempts and error_angles to a csv file. Write also the mean and CI for each pertubation_types to a csv file."""
-
-data.to_csv('HW2/error_angles_baseline_trial_{}_{}.csv'.format(trial, subject_name), header=True, index=True,)
+data = pd.DataFrame(data)
+data.to_csv('HW2/error_angles_baseline_trial_{}_{}.csv'.format(session, subject_name), header=True, index=False,)
 
 
 sys.exit()

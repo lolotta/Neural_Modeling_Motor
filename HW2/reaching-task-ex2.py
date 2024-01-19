@@ -8,7 +8,7 @@ import csv
 from datetime import datetime
 
 # Subject name
-subject_name = "Lotta"
+subject_name = "Lea"
 # Game parameters
 experimenter = "Lotta"
 if experimenter == "Lotta":
