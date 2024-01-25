@@ -70,6 +70,8 @@ perturbed_mouse_angle = 0
 gradual_step = 0
 gradual_attempts = 1
 perturbation_rand=random.uniform(-math.pi/4, +math.pi/4)
+""" Mean and Std for normal distribution in the lession condition """
+mean, std = 0, 1 
 
  # Lists to store important angles per attempt
 error_angles = [] 
@@ -260,6 +262,9 @@ while running:
         
         elif perturbation_type == 'random':   
             perturbed_mouse_angle = mouse_angle + perturbation_rand 
+            
+        elif perturbation_type == 'lession':   
+            perturbed_mouse_angle = mouse_angle + perturbation_lession
     
         # calculate perturbed_mouse_pos 
         perturbed_mouse_pos = [
@@ -275,6 +280,9 @@ while running:
     if check_target_reached():
         score += 1
         attempts += 1
+        
+        """ Check if the the target was reached """
+        target_reached = True
 
         # CALCULATE AND SAVE ERRORS between target and circle end position for a hit
         target_angle = math.atan2(new_target[1] - START_POSITION[1], new_target[0] - START_POSITION[0])    
@@ -293,7 +301,7 @@ while running:
         if perturbation_type == 'gradual' and perturbation_mode:   
             gradual_attempts += 1
 
-    #miss if player leaves the target_radius + 1% tolerance
+    # miss if player leaves the target_radius + 1% tolerance
     elif new_target and math.hypot(circle_pos[0] - START_POSITION[0], circle_pos[1] - START_POSITION[1]) > TARGET_RADIUS*1.01:
         attempts += 1
 
@@ -316,7 +324,7 @@ while running:
 
         if perturbation_type == 'gradual' and perturbation_mode:   
             gradual_attempts += 1
-        
+         
 
     # Check if player moved to the center and generate new target
     if not new_target and at_start_position_and_generate_target(mouse_pos):
@@ -324,6 +332,9 @@ while running:
         move_faster = False
         start_time = pygame.time.get_ticks()  # Start the timer for the attempt
         perturbation_rand=random.uniform(-math.pi/4, +math.pi/4) # generate new random perturbation for type 'random'
+        
+        """ Task 4: Create a perturbation angle drawn from a normal distribution with mean and std"""
+        perturbation_lession = np.random.normal(mean, std, 1)
 
 
     # Check if time limit for the attempt is reached
@@ -338,7 +349,8 @@ while running:
         text = font.render('MOVE FASTER!', True, RED)
         text_rect = text.get_rect(center=(START_POSITION))
         screen.blit(text, text_rect)
-
+        
+        
 # Generate playing field
     # Draw current target
     if new_target:
