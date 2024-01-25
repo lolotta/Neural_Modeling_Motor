@@ -78,6 +78,8 @@ error_angles = []
 target_angles = []
 circle_angles = []
 target_pos = []
+""" Create a 2d list for solving the trajoctories per attempt. """
+trajactory = [[] for i in range(ATTEMPTS_LIMIT)]
 
 
 target_reached_bool = []
@@ -200,6 +202,8 @@ while running:
     pygame.mouse.set_visible(False)
     # Get mouse position
     mouse_pos = pygame.mouse.get_pos()
+    
+    trajactory[attempts] += [mouse_pos]
 
     # Calculate distance from START_POSITION to mouse_pos
     deltax = mouse_pos[0] - START_POSITION[0]
