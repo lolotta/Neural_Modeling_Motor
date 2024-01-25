@@ -164,7 +164,7 @@ while running:
         """ Tripel every element and flatten the list """
         Collected_angels = sum([[i] * 3 for i in NEXT_ANGLES],[])
         
-        trial_number = (np.array(trial_number) // 20).tolist()
+        #trial_number = (np.array(trial_number) // 20).tolist()
         
         """ Block 0 """
         if attempts == trial_number[0]:
