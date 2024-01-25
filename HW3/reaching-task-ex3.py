@@ -101,6 +101,12 @@ def generate_target_position():
     new_target_y = HEIGHT // 2 + TARGET_RADIUS * -math.cos(angle) # zero-angle at the top
     return [new_target_x, new_target_y]
 
+def draw_old_trajactory(trajactory, attempts, screen):
+    last_trajactory = trajactory[-1]
+    for i in range(len(last_trajactory)-1):
+        pygame.draw.line(screen, WHITE, last_trajactory[i], last_trajactory[i+1], 1)
+
+
 # Function to check if the current target is reached
 def check_target_reached():
     if new_target:
@@ -295,9 +301,17 @@ while running:
             gradual_attempts += 1
         
 
+
+
     # Check if player moved to the center and generate new target
     if not new_target and at_start_position_and_generate_target(mouse_pos):
         new_target = generate_target_position()
+        
+        if feedback == 'trajectory':
+            draw_old_trajactory(trajactory, attempts, screen)
+        elif feedback == 'endpos':
+            pygame.draw.circle(screen, WHITE, circle_pos, trajactory[-1][-1] - trajactory[-1][-1])
+                      
         move_faster = False
         start_time = pygame.time.get_ticks()  # Start the timer for the attempt
         perturbation_rand=random.uniform(-math.pi/4, +math.pi/4) # generate new random perturbation for type 'random'
@@ -332,11 +346,13 @@ while running:
         pygame.draw.circle(screen, WHITE, circle_pos, CIRCLE_SIZE // 2)
     
     # Draw start position
-    if target_reached_bool[-1]:
-        color = GREEN
+    if feedback == 'rl':
+        if target_reached_bool[-1]:
+            color = GREEN
+        else:
+            color = RED
     else:
-        color = RED
-     
+        color = WHITE
     pygame.draw.circle(screen, color, START_POSITION, 5)        
 
     # Show attempts
