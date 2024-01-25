@@ -79,6 +79,9 @@ target_angles = []
 circle_angles = []
 target_pos = []
 
+
+target_reached_bool = []
+
 #Choose experimental setup
 exp_setup='feedback' #'perturbation_types' (HW1),'generalization' (HW2,A),'interference' (HW2,B)
 feedbacks_types = ['no','trajectory', 'endpos', 'rl']
@@ -235,8 +238,6 @@ while running:
         score += 1
         attempts += 1
         
-        """ Check if the the target was reached """
-        target_reached = True
 
         # CALCULATE AND SAVE ERRORS between target and circle end position for a hit
         target_angle = math.atan2(new_target[1] - START_POSITION[1], new_target[0] - START_POSITION[0])    
@@ -244,8 +245,13 @@ while running:
         
         if move_faster:
             error_angle = np.nan
+            
+            """ Create a boolean list with True for each target reached and False for miss or move faster. """
+            target_reached_bool += [False]
         else:
             error_angle = circle_end_angle - target_angle
+            """ Create a boolean list with True for each target reached and False for miss or move faster. """
+            target_reached_bool += [True]
             
         target_pos.append(target_angle)   
         
@@ -258,6 +264,9 @@ while running:
     #miss if player leaves the target_radius + 1% tolerance
     elif new_target and math.hypot(circle_pos[0] - START_POSITION[0], circle_pos[1] - START_POSITION[1]) > TARGET_RADIUS*1.01:
         attempts += 1
+        
+        """ Create a boolean list with True for each target reached and False for miss or move faster. """
+        target_reached_bool += [False]
 
         # CALCULATE AND SAVE ERRORS between target and circle end position for a miss
         target_angle = math.atan2(new_target[1] - START_POSITION[1], new_target[0] - START_POSITION[0])    
@@ -317,7 +326,12 @@ while running:
         pygame.draw.circle(screen, WHITE, circle_pos, CIRCLE_SIZE // 2)
     
     # Draw start position
-    pygame.draw.circle(screen, WHITE, START_POSITION, 5)        
+    if target_reached_bool[-1]:
+        color = GREEN
+    else:
+        color = RED
+     
+    pygame.draw.circle(screen, color, START_POSITION, 5)        
 
     # Show attempts
     font = pygame.font.Font(None, 36)
