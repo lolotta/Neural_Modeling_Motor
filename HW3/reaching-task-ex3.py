@@ -40,7 +40,7 @@ BLUE = (0, 0, 255)
 pygame.init()
 
 # Set up the display
-test_mode= False # test_mode=False for recording of unbiased subjects 
+test_mode= True # test_mode=False for recording of unbiased subjects 
 if test_mode:
     screen = pygame.display.set_mode((WIDTH-50, HEIGHT-50))
 else:
@@ -102,7 +102,7 @@ def generate_target_position():
     return [new_target_x, new_target_y]
 
 def draw_old_trajactory(trajactory, attempts, screen):
-    last_trajactory = trajactory[-1]
+    last_trajactory = trajactory[attempts-1]
     for i in range(len(last_trajactory)-1):
         pygame.draw.line(screen, WHITE, last_trajactory[i], last_trajactory[i+1], 1)
 
@@ -307,10 +307,7 @@ while running:
     if not new_target and at_start_position_and_generate_target(mouse_pos):
         new_target = generate_target_position()
         
-        if feedback == 'trajectory':
-            draw_old_trajactory(trajactory, attempts, screen)
-        elif feedback == 'endpos':
-            pygame.draw.circle(screen, WHITE, circle_pos, trajactory[-1][-1] - trajactory[-1][-1])
+
                       
         move_faster = False
         start_time = pygame.time.get_ticks()  # Start the timer for the attempt
@@ -333,6 +330,12 @@ while running:
         text_rect = text.get_rect(center=(START_POSITION))
         screen.blit(text, text_rect)
 
+    """ Draw the different feedback types"""
+    if feedback == 'trajectory':
+        draw_old_trajactory(trajactory, attempts, screen)
+    elif feedback == 'endpos':
+        pygame.draw.circle(screen, WHITE, circle_pos, trajactory[attempts-1][-1] - trajactory[attempts-1][-1])
+        
 # Generate playing field
     # Draw current target
     if new_target:
