@@ -28,7 +28,6 @@ MASK_RADIUS = 1 * TARGET_RADIUS
 ATTEMPTS_LIMIT = 320
 START_POSITION = (WIDTH // 2, HEIGHT // 2)
 START_ANGLE = 0
-NEXT_ANGLES = [0,50,-50,100]
 PERTURBATION_ANGLE= 30
 TIME_LIMIT = 1000 # time limit in ms
 
@@ -43,7 +42,7 @@ BLUE = (0, 0, 255)
 pygame.init()
 
 # Set up the display
-test_mode= True # test_mode=False for recording of unbiased subjects 
+test_mode= False # test_mode=False for recording of unbiased subjects 
 if test_mode:
     screen = pygame.display.set_mode((WIDTH-50, HEIGHT-50))
 else:
@@ -153,68 +152,96 @@ while running:
         #TASK 1: DESIGN YOUR OWN EXPERIMENT (HW2_A OR HW2_B)      
         # Design experiment A
         
-        trial_number = [0, 10, 30, 90,
-                        110, 130, 190,
-                        210, 230, 290,
-                        310]
+        trial_number = [0, 20, 80, 100,
+                        120, 180, 200,
+                        220, 280, 300,
+                        320, 380, 400]
         
-        #trial_number = (np.array(trial_number) // 10).tolist()
+        NEXT_ANGLES = [40, -30,  70, -20]
+        
+        """ Tripel every element and flatten the list """
+        Collected_angels = sum([[i] * 3 for i in NEXT_ANGLES],[])
+        
+        trial_number = (np.array(trial_number) // 20).tolist()
         
         """ Block 0 """
         if attempts == trial_number[0]:
-            perturbation_mode = True
-            perturbation_type = 'lession'
-            sequence_target =  NEXT_ANGLES[0]
-            feedback = feedbacks_types[3]
-
-
-        elif attempts == trial_number[1]:
             perturbation_mode = False
-            sequence_target =  NEXT_ANGLES[1]
-            feedback = feedbacks_types[1]
-
-        elif attempts == trial_number[2]:
+            sequence_target =  NEXT_ANGLES[0]
+            feedback = feedbacks_types[0]
+        
+        elif attempts == trial_number[1]:
             perturbation_mode = True
             perturbation_type = 'gradual'
-            sequence_target =  NEXT_ANGLES[1]
+            sequence_target =  NEXT_ANGLES[0]
+            feedback = feedbacks_types[0]
+        
+        elif attempts == trial_number[2]:
+            perturbation_mode = False
+            sequence_target =  NEXT_ANGLES[0]
+            feedback = feedbacks_types[0]
+            
+            """ Block 1 """
         elif attempts == trial_number[3]:
             perturbation_mode = False
             sequence_target =  NEXT_ANGLES[1]
+            feedback = feedbacks_types[1]
             
-            """ Block 1 """
         elif attempts == trial_number[4]:
-            perturbation_mode = False
-            sequence_target =  NEXT_ANGLES[2]
-            feedback = feedbacks_types[2]
-
-        elif attempts == trial_number[5]:
             perturbation_mode = True
             perturbation_type = 'gradual'
-            sequence_target =  NEXT_ANGLES[2]
+            sequence_target =  NEXT_ANGLES[1]
+            feedback = feedbacks_types[1]
+            
+        elif attempts == trial_number[5]:
+            perturbation_mode = False
+            sequence_target =  NEXT_ANGLES[1]
+            feedback = feedbacks_types[1]
+            
+            """ Block 2 """
         elif attempts == trial_number[6]:
             perturbation_mode = False
             sequence_target =  NEXT_ANGLES[2]
+            feedback = feedbacks_types[2]
             
-            """ Block 2 """
         elif attempts == trial_number[7]:
-            perturbation_mode = False
-            sequence_target =  NEXT_ANGLES[3]
-            feedback = feedbacks_types[3]
-
-        elif attempts == trial_number[8]:
             perturbation_mode = True
             perturbation_type = 'gradual'
-            sequence_target =  NEXT_ANGLES[3]
+            sequence_target =  NEXT_ANGLES[2]
+            feedback = feedbacks_types[2]
+        
+        elif attempts == trial_number[8]:
+            perturbation_mode = False
+            sequence_target =  NEXT_ANGLES[2]
+            feedback = feedbacks_types[2]
+            
+            """ Block 3 """
         elif attempts == trial_number[9]:
             perturbation_mode = False
             sequence_target =  NEXT_ANGLES[3]
-                
+            feedback = feedbacks_types[3]
+            
+        elif attempts == trial_number[10]:
+            perturbation_mode = True
+            perturbation_type = 'gradual'
+            sequence_target =  NEXT_ANGLES[3]
+            feedback = feedbacks_types[3]
+        
+        elif attempts == trial_number[11]:
+            perturbation_mode = False
+            sequence_target =  NEXT_ANGLES[3]
+            feedback = feedbacks_types[3]
+        elif attempts >= trial_number[12]:
+            running = False 
+        
         
         """ Numbers of attempts for each perturbation type """
         number_attempts = np.array(trial_number[1:]) - np.array(trial_number[:-1])
-        string_attempts = ['Test', 'No Perturbation', 'Gradual Perturbation', 'Aftereffect',
+        string_attempts = ['No Perturbation', 'Gradual Perturbation', 'Aftereffect',
+                           'No Perturbation', 'Gradual Perturbation', 'Aftereffect',
                            'No Perturbation', 'Gradual Perturbation', 'Aftereffect',
                            'No Perturbation', 'Gradual Perturbation', 'Aftereffect']  
+
 
         
     # Hide the mouse cursor
@@ -279,13 +306,17 @@ while running:
             """ Create a boolean list with True for each target reached and False for miss or move faster. """
             target_reached_bool += [True]
             
-        target_pos.append(target_angle)   
-        
+
+        target_pos.append(new_target)
+        target_angles.append(target_angle)
+        circle_angles.append(circle_end_angle)
         error_angles.append(error_angle)
+
         new_target = None  # Set target to None to indicate hit
         start_time = 0  # Reset start_time after hitting the target
         if perturbation_type == 'gradual' and perturbation_mode:   
             gradual_attempts += 1
+            
 
     #miss if player leaves the target_radius + 1% tolerance
     elif new_target and math.hypot(circle_pos[0] - START_POSITION[0], circle_pos[1] - START_POSITION[1]) > TARGET_RADIUS*1.01:
@@ -304,7 +335,7 @@ while running:
         else:
             error_angle = circle_end_angle - target_angle
         
-        target_pos.append(target_angle)
+        target_pos.append(new_target)
         target_angles.append(target_angle)
         circle_angles.append(circle_end_angle)
         error_angles.append(error_angle)
@@ -321,7 +352,6 @@ while running:
     if not new_target and at_start_position_and_generate_target(mouse_pos):
         MASK_RADIUS = 0
         new_target = generate_target_position()
-        target_pos += [new_target]
         move_faster = False
         start_time = pygame.time.get_ticks()  # Start the timer for the attempt
         perturbation_rand=random.uniform(-math.pi/4, +math.pi/4) # generate new random perturbation for type 'random'
@@ -425,16 +455,12 @@ if not test_mode:
     for trial, number in zip(string_attempts, number_attempts):
         string_trials += [trial] * number
         
-    for angel, number in zip(NEXT_ANGLES, number_attempts):
-        target_angles += [angel] * number
-    
+
     if NEXT_ANGLES != []:
-           
-        """ Loop in three-steps through the numbers of attempts for each ANGEL"""
-        Collected_angels = []
-        for i in range(len(NEXT_ANGLES)):
-            Collected_angels += [NEXT_ANGLES[i]] * np.sum((number_attempts[i*3:(i*3)+3]))
-      
+        changed_angles = []
+        
+        for angel, number in zip(Collected_angels, number_attempts):
+            changed_angles += [angel] * number
         
         data = {'subject_name': [subject_name] * len(string_trials),
                 'target_mode': [target_mode] * len(string_trials),
@@ -442,7 +468,7 @@ if not test_mode:
                 'trial_number': np.arange(1, len(string_trials)+1),
                 'trial_name' : string_trials,
                 'target_pos': target_pos,
-                'changed_angels': Collected_angels,
+                'changed_angels': changed_angles,
                 'error_angles': error_angles
                 }
     else:
@@ -459,6 +485,7 @@ if not test_mode:
     # Load data from CSV file
 
     # Extract data for plotting
+    print(len(string_trials), len(target_pos), len(target_angles), len(error_angles))   
 
     # Create a dataframe from the dictionary
     df = pd.DataFrame(data)
