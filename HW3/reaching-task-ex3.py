@@ -424,6 +424,9 @@ if not test_mode:
     string_trials = []
     for trial, number in zip(string_attempts, number_attempts):
         string_trials += [trial] * number
+        
+    for angel, number in zip(NEXT_ANGLES, number_attempts):
+        target_angles += [angel] * number
     
     if NEXT_ANGLES != []:
            
