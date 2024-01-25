@@ -21,7 +21,7 @@ elif experimenter == "Flo":
 CIRCLE_SIZE = 20
 TARGET_SIZE = CIRCLE_SIZE
 TARGET_RADIUS = 300
-MASK_RADIUS = 0.75 * TARGET_RADIUS
+MASK_RADIUS = 1 * TARGET_RADIUS
 ATTEMPTS_LIMIT = 320
 START_POSITION = (WIDTH // 2, HEIGHT // 2)
 START_ANGLE = 0
@@ -154,7 +154,7 @@ while running:
         if attempts == trial_number[0]:
             perturbation_mode = False
             sequence_target =  NEXT_ANGLES[0]
-            feedback = feedbacks_types[0]
+            feedback = feedbacks_types[3]
 
 
         elif attempts == trial_number[1]:
@@ -211,7 +211,8 @@ while running:
     # Get mouse position
     mouse_pos = pygame.mouse.get_pos()
     
-    trajactory[attempts] += [mouse_pos]
+    if new_target:
+        trajactory[attempts] += [mouse_pos]
 
     # Calculate distance from START_POSITION to mouse_pos
     deltax = mouse_pos[0] - START_POSITION[0]
@@ -247,6 +248,7 @@ while running:
     # Check if target is hit or missed
     # hit if circle touches target's center
     if check_target_reached():
+        MASK_RADIUS = 1 * TARGET_RADIUS
         score += 1
         attempts += 1
         
@@ -275,6 +277,7 @@ while running:
 
     #miss if player leaves the target_radius + 1% tolerance
     elif new_target and math.hypot(circle_pos[0] - START_POSITION[0], circle_pos[1] - START_POSITION[1]) > TARGET_RADIUS*1.01:
+        MASK_RADIUS = 1 * TARGET_RADIUS
         attempts += 1
         
         """ Create a boolean list with True for each target reached and False for miss or move faster. """
@@ -302,13 +305,11 @@ while running:
         
 
 
-
     # Check if player moved to the center and generate new target
     if not new_target and at_start_position_and_generate_target(mouse_pos):
+        MASK_RADIUS = 0
         new_target = generate_target_position()
-        
-
-                      
+        target_pos += [new_target]
         move_faster = False
         start_time = pygame.time.get_ticks()  # Start the timer for the attempt
         perturbation_rand=random.uniform(-math.pi/4, +math.pi/4) # generate new random perturbation for type 'random'
@@ -334,7 +335,7 @@ while running:
     if feedback == 'trajectory':
         draw_old_trajactory(trajactory, attempts, screen)
     elif feedback == 'endpos':
-        pygame.draw.circle(screen, WHITE, circle_pos, trajactory[attempts-1][-1] - trajactory[attempts-1][-1])
+        pygame.draw.circle(screen, WHITE, trajactory[attempts-1][-1], CIRCLE_SIZE // 2)
         
 # Generate playing field
     # Draw current target
@@ -349,13 +350,14 @@ while running:
         pygame.draw.circle(screen, WHITE, circle_pos, CIRCLE_SIZE // 2)
     
     # Draw start position
-    if feedback == 'rl':
+    if feedback == 'rl' and attempts > 0:
         if target_reached_bool[-1]:
             color = GREEN
         else:
             color = RED
     else:
         color = WHITE
+
     pygame.draw.circle(screen, color, START_POSITION, 5)        
 
     # Show attempts
