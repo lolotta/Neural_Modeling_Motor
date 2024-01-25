@@ -81,7 +81,7 @@ target_pos = []
 
 #Choose experimental setup
 exp_setup='feedback' #'perturbation_types' (HW1),'generalization' (HW2,A),'interference' (HW2,B)
-feedbacks = ['trajectory', 'endpos', 'rl']
+feedbacks_types = ['no','trajectory', 'endpos', 'rl']
 # Function to generate a new target position
 def generate_target_position():
     if target_mode == 'random':
@@ -132,10 +132,10 @@ while running:
         #TASK 1: DESIGN YOUR OWN EXPERIMENT (HW2_A OR HW2_B)      
         # Design experiment A
         
-        trial_number = [0, 20, 60, 80,
-                        100, 140, 160,
-                        180, 220, 240,
-                        260, 300, 320]
+        trial_number = [0, 10, 30, 90,
+                        110, 130, 190,
+                        210, 230, 290,
+                        310]
         
         #trial_number = (np.array(trial_number) // 10).tolist()
         
@@ -143,52 +143,50 @@ while running:
         if attempts == trial_number[0]:
             perturbation_mode = False
             sequence_target =  NEXT_ANGLES[0]
+            feedback = feedbacks_types[0]
+
+
         elif attempts == trial_number[1]:
-            perturbation_mode = True
-            perturbation_type = 'sudden'
-            sequence_target =  NEXT_ANGLES[0]
-        elif attempts == trial_number[2]:
             perturbation_mode = False
-            sequence_target =  NEXT_ANGLES[0]
-            
-            """ Block 1 """
+            sequence_target =  NEXT_ANGLES[1]
+            feedback = feedbacks_types[1]
+
+        elif attempts == trial_number[2]:
+            perturbation_mode = True
+            perturbation_type = 'gradual'
+            sequence_target =  NEXT_ANGLES[1]
         elif attempts == trial_number[3]:
             perturbation_mode = False
             sequence_target =  NEXT_ANGLES[1]
-        elif attempts == trial_number[4]:
-            perturbation_mode = True
-            perturbation_type = 'sudden'
-            sequence_target =  NEXT_ANGLES[1]
-        elif attempts == trial_number[5]:
-            perturbation_mode = False
-            sequence_target =  NEXT_ANGLES[1]
             
-            """ Block 2 """
+            """ Block 1 """
+        elif attempts == trial_number[4]:
+            perturbation_mode = False
+            sequence_target =  NEXT_ANGLES[2]
+            feedback = feedbacks_types[2]
+
+        elif attempts == trial_number[5]:
+            perturbation_mode = True
+            perturbation_type = 'gradual'
+            sequence_target =  NEXT_ANGLES[2]
         elif attempts == trial_number[6]:
             perturbation_mode = False
             sequence_target =  NEXT_ANGLES[2]
+            
+            """ Block 2 """
         elif attempts == trial_number[7]:
-            perturbation_mode = True
-            perturbation_type = 'sudden'
-            sequence_target =  NEXT_ANGLES[2]
-        elif attempts == trial_number[8]:
             perturbation_mode = False
-            sequence_target =  NEXT_ANGLES[2]
-                
-            """ Block 3 """
+            sequence_target =  NEXT_ANGLES[3]
+            feedback = feedbacks_types[3]
+
+        elif attempts == trial_number[8]:
+            perturbation_mode = True
+            perturbation_type = 'gradual'
+            sequence_target =  NEXT_ANGLES[3]
         elif attempts == trial_number[9]:
             perturbation_mode = False
             sequence_target =  NEXT_ANGLES[3]
-        elif attempts == trial_number[10]:
-            perturbation_mode = True
-            perturbation_type = 'sudden'
-            sequence_target =  NEXT_ANGLES[3]
-        elif attempts == trial_number[11]:
-            perturbation_mode = False
-            sequence_target =  NEXT_ANGLES[3]
-        elif attempts >= trial_number[12]:
-            running = False
-            
+                
         
         """ Numbers of attempts for each perturbation type """
         number_attempts = np.array(trial_number[1:]) - np.array(trial_number[:-1])
@@ -257,7 +255,7 @@ while running:
         if perturbation_type == 'gradual' and perturbation_mode:   
             gradual_attempts += 1
 
-    # miss if player leaves the target_radius + 1% tolerance
+    #miss if player leaves the target_radius + 1% tolerance
     elif new_target and math.hypot(circle_pos[0] - START_POSITION[0], circle_pos[1] - START_POSITION[1]) > TARGET_RADIUS*1.01:
         attempts += 1
 
@@ -280,7 +278,7 @@ while running:
 
         if perturbation_type == 'gradual' and perturbation_mode:   
             gradual_attempts += 1
-         
+        
 
     # Check if player moved to the center and generate new target
     if not new_target and at_start_position_and_generate_target(mouse_pos):
@@ -305,8 +303,7 @@ while running:
         text = font.render('MOVE FASTER!', True, RED)
         text_rect = text.get_rect(center=(START_POSITION))
         screen.blit(text, text_rect)
-        
-        
+
 # Generate playing field
     # Draw current target
     if new_target:
