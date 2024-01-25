@@ -195,7 +195,9 @@ while running:
         
         """ Numbers of attempts for each perturbation type """
         number_attempts = np.array(trial_number[1:]) - np.array(trial_number[:-1])
-        string_attempts = ['No Perturbation', 'Sudden Perturbation', 'Aftereffect'] * 4  
+        string_attempts = ['Test', 'No Perturbation', 'Gradual Perturbation', 'Aftereffect',
+                           'No Perturbation', 'Gradual Perturbation', 'Aftereffect',
+                           'No Perturbation', 'Gradual Perturbation', 'Aftereffect']  
 
         
     # Hide the mouse cursor
@@ -417,7 +419,7 @@ if not test_mode:
     # Create a dataframe from the dictionary
     df = pd.DataFrame(data)
     # Save dataframe to CSV
-    df.to_csv('HW2/error_angles_{}.csv'.format(subject_name), header=True, index=False, 
+    df.to_csv('HW3/error_angles_{}.csv'.format(subject_name), header=True, index=False, 
               na_rep=np.NaN)
 
 
