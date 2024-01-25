@@ -7,6 +7,9 @@ import matplotlib.pyplot as plt
 import csv
 from datetime import datetime
 
+import random as rand
+import scipy.stats as stats
+
 # Subject name
 subject_name = "Lea"
 # Game parameters
@@ -66,12 +69,19 @@ sequence_target=START_ANGLE
 perturbation_mode= False
 perturbation_type= 'sudden' # Mode for angular shift of controll: random, gradual or sudden
 perturbation_angle = math.radians(PERTURBATION_ANGLE)  # Angle between mouse_pos and circle_pos
+
 perturbed_mouse_angle = 0
 gradual_step = 0
 gradual_attempts = 1
 perturbation_rand=random.uniform(-math.pi/4, +math.pi/4)
 """ Mean and Std for normal distribution in the lession condition """
-mean, std = 0, 1 
+mean, std = 0, 1
+
+""" Weight the perturbation angles with a normal distribution """
+angles = np.linspace(-math.pi/4, math.pi/4, 100)
+""" Create  a normal distribution with mean and std """
+weights = stats.norm.pdf(angles, mean, std)
+perturbation_lession = rand.choices(angles, weights=weights, k=1)[0]
 
  # Lists to store important angles per attempt
 error_angles = [] 
@@ -152,7 +162,8 @@ while running:
         
         """ Block 0 """
         if attempts == trial_number[0]:
-            perturbation_mode = False
+            perturbation_mode = True
+            perturbation_type = 'lession'
             sequence_target =  NEXT_ANGLES[0]
             feedback = feedbacks_types[3]
 
@@ -235,6 +246,7 @@ while running:
             
         elif perturbation_type == 'lession':   
             perturbed_mouse_angle = mouse_angle + perturbation_lession
+            print(perturbation_lession)
     
         # calculate perturbed_mouse_pos 
         perturbed_mouse_pos = [
@@ -314,8 +326,16 @@ while running:
         start_time = pygame.time.get_ticks()  # Start the timer for the attempt
         perturbation_rand=random.uniform(-math.pi/4, +math.pi/4) # generate new random perturbation for type 'random'
         
-        """ Task 4: Create a perturbation angle drawn from a normal distribution with mean and std"""
-        perturbation_lession = np.random.normal(mean, std, 1)
+        """ Task 4: Create a perturbation angle drawn from a normal distribution with mean and std""" 
+    
+        
+        """ Weight the perturbation angles with a normal distribution """
+        angles = np.linspace(-math.pi/4, math.pi/4, 100)
+        """ Create  a normal distribution with mean and std """
+        weights = stats.norm.pdf(angles, mean, std)
+        perturbation_lession = rand.choices(angles, weights=weights, k=1)[0]
+        
+        
 
 
     # Check if time limit for the attempt is reached
