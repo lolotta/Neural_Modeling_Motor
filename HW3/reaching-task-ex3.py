@@ -25,7 +25,7 @@ MASK_RADIUS = 0.75 * TARGET_RADIUS
 ATTEMPTS_LIMIT = 320
 START_POSITION = (WIDTH // 2, HEIGHT // 2)
 START_ANGLE = 0
-NEXT_ANGLES = [20,40,30,60]
+NEXT_ANGLES = [0,50,-50,100]
 PERTURBATION_ANGLE= 30
 TIME_LIMIT = 1000 # time limit in ms
 
@@ -80,8 +80,8 @@ circle_angles = []
 target_pos = []
 
 #Choose experimental setup
-exp_setup='generalization' #'perturbation_types' (HW1),'generalization' (HW2,A),'interference' (HW2,B)
-
+exp_setup='feedback' #'perturbation_types' (HW1),'generalization' (HW2,A),'interference' (HW2,B)
+feedbacks = ['trajectory', 'endpos', 'rl']
 # Function to generate a new target position
 def generate_target_position():
     if target_mode == 'random':
@@ -128,44 +128,7 @@ while running:
             elif event.key == pygame.K_5: # Press '5' to end pertubation_mode
                 perturbation_mode = False
 
-    if exp_setup == 'perturbation_types':        
-        # Design experiment perturbation types(HW1)
-        trial_number = [0, 20, 60, 100, 140, 180, 220, 260, 300, 320]
-        
-        #trial_number = (np.array(trial_number) // 10).tolist()
-
-
-        if attempts == trial_number[0]:
-            pertubation_mode = False
-        elif attempts == trial_number[1]:
-            pertubation_mode = True
-            pertubation_type = 'sudden' 
-        elif attempts == trial_number[2]:
-            pertubation_mode = False
-        elif attempts == trial_number[3]:
-            pertubation_mode = True    
-            pertubation_type = 'sudden'         
-        elif attempts == trial_number[4]:
-            pertubation_mode = False
-        elif attempts == trial_number[5]:
-            pertubation_mode = True
-            pertubation_type = 'sudden'         
-        elif attempts == trial_number[6]:
-            pertubation_mode = False
-        elif attempts == trial_number[7]:
-            pertubation_mode = True
-            pertubation_type = 'sudden'   
-        elif attempts == trial_number[8]:
-            pertubation_mode = False      
-
-        elif attempts >= trial_number[9]:
-            running = False 
-            
-        """ Numbers of attempts for each perturbation type """
-        number_attempts = np.array(trial_number[1:]) - np.array(trial_number[:-1])
-        string_attempts = ['No Perturbation', 'Sudden Perturbation'] * 5             
-
-    elif exp_setup == 'generalization':
+    if exp_setup == 'feedback':
         #TASK 1: DESIGN YOUR OWN EXPERIMENT (HW2_A OR HW2_B)      
         # Design experiment A
         
@@ -230,14 +193,7 @@ while running:
         """ Numbers of attempts for each perturbation type """
         number_attempts = np.array(trial_number[1:]) - np.array(trial_number[:-1])
         string_attempts = ['No Perturbation', 'Sudden Perturbation', 'Aftereffect'] * 4  
-        
 
-    elif exp_setup == 'interference':
-        # Design experiment B
-        if attempts == 1:
-            perturbation_mode = False
-            sequence_target = 45 # choose new target locations
-        #...
         
     # Hide the mouse cursor
     pygame.mouse.set_visible(False)
