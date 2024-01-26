@@ -56,8 +56,6 @@ score = 0
 attempts = 0
 new_target = None
 start_time = 0
-
-new_target = None
 move_faster = False 
 clock = pygame.time.Clock()
 
@@ -97,7 +95,7 @@ target_reached_bool = []
 
 #Choose experimental setup
 exp_setup='feedback' #'perturbation_types' (HW1),'generalization' (HW2,A),'interference' (HW2,B)
-feedbacks_types = ['no','trajectory', 'endpos', 'rl']
+feedbacks_types = ['rl', 'rl-gradient']
 # Function to generate a new target position
 def generate_target_position():
     if target_mode == 'random':
@@ -155,11 +153,9 @@ while running:
         # Design experiment A
         
         trial_number = [0, 20, 80, 100,
-                        120, 180, 200,
-                        220, 280, 300,
-                        320, 380, 400]
+                        120, 180, 200]
         
-        NEXT_ANGLES = [40, -30,  70, -20]
+        NEXT_ANGLES = [40, -30]
         
         """ Tripel every element and flatten the list """
         Collected_angels = sum([[i] * 3 for i in NEXT_ANGLES],[])
@@ -201,50 +197,16 @@ while running:
             sequence_target =  NEXT_ANGLES[1]
             feedback = feedbacks_types[1]
             
-            """ Block 2 """
-        elif attempts == trial_number[6]:
-            perturbation_mode = False
-            sequence_target =  NEXT_ANGLES[2]
-            feedback = feedbacks_types[2]
-            
-        elif attempts == trial_number[7]:
-            perturbation_mode = True
-            perturbation_type = 'gradual'
-            sequence_target =  NEXT_ANGLES[2]
-            feedback = feedbacks_types[2]
-        
-        elif attempts == trial_number[8]:
-            perturbation_mode = False
-            sequence_target =  NEXT_ANGLES[2]
-            feedback = feedbacks_types[2]
-            
-            """ Block 3 """
-        elif attempts == trial_number[9]:
-            perturbation_mode = False
-            sequence_target =  NEXT_ANGLES[3]
-            feedback = feedbacks_types[3]
-            
-        elif attempts == trial_number[10]:
-            perturbation_mode = True
-            perturbation_type = 'gradual'
-            sequence_target =  NEXT_ANGLES[3]
-            feedback = feedbacks_types[3]
-        
-        elif attempts == trial_number[11]:
-            perturbation_mode = False
-            sequence_target =  NEXT_ANGLES[3]
-            feedback = feedbacks_types[3]
-        
-        elif attempts >= trial_number[12]:
+         
+        elif attempts >= trial_number[6]:
             running = False 
         
         
         """ Numbers of attempts for each perturbation type """
         number_attempts = np.array(trial_number[1:]) - np.array(trial_number[:-1])
         string_attempts = ['No Perturbation', 'Gradual Perturbation', 'Aftereffect',
-                           'No Perturbation', 'Gradual Perturbation', 'Aftereffect',
-                           'No Perturbation', 'Gradual Perturbation', 'Aftereffect',
-                           'No Perturbation', 'Gradual Perturbation', 'Aftereffect']  
+                           'No Perturbation', 'Gradual Perturbation', 'Aftereffect'
+                           ]  
 
 
         
@@ -388,11 +350,11 @@ while running:
         screen.blit(text, text_rect)
 
     """ Draw the different feedback types"""
-    if attempts > 0:
-        if feedback == 'trajectory':
-            draw_old_trajactory(trajactory, attempts, screen)
-        elif feedback == 'endpos':
-            pygame.draw.circle(screen, GREY, trajactory[attempts-1][-1], CIRCLE_SIZE // 2)
+    # if attempts > 0:
+    #     if feedback == 'trajectory':
+    #         draw_old_trajactory(trajactory, attempts, screen)
+    #     elif feedback == 'endpos':
+    #         pygame.draw.circle(screen, GREY, trajactory[attempts-1][-1], CIRCLE_SIZE // 2)
         
 # Generate playing field
     # Draw current target
@@ -405,13 +367,20 @@ while running:
             pygame.draw.circle(screen, WHITE, circle_pos, CIRCLE_SIZE // 2)
     else:
         pygame.draw.circle(screen, WHITE, circle_pos, CIRCLE_SIZE // 2)
-    
     # Draw start position
     if feedback == 'rl' and attempts > 0:
         if target_reached_bool[-1]:
             color = GREEN
         else:
             color = RED
+
+    elif feedback == 'rl-gradient' and attempts > 0:
+        if target_reached_bool[-1]:
+            color = GREEN
+        else:
+            error_angle_degrees = np.abs(np.degrees(error_angles[-1]))
+            near_goal_ratio = np.min((error_angle_degrees/30, 1))
+            color = near_goal_ratio*np.array(RED) + (1-near_goal_ratio) * np.array(GREEN)
     else:
         color = WHITE
 
@@ -496,7 +465,7 @@ if not test_mode:
     if not os.path.exists('Savings'):
         os.makedirs('Savings')
     
-    df.to_csv('Savings/error_angles_{}.csv'.format(subject_name), header=True, index=False, 
+    df.to_csv('HW3/Savings/error_angles_gradient_rl_{}.csv'.format(subject_name), header=True, index=False, 
               na_rep=np.NaN)
 
 
