@@ -91,9 +91,9 @@ target_reached_bool = []
 exp_setup='noise + feedback'
 
 # give mean and std
-small_noise = [0, 3]
-medium_noise = [1.5, 3]
-large_noise = [3, 4]
+small_noise = [0, 1]
+medium_noise = [2, 1]
+large_noise = [4, 1]
 
 noise_types = ['no', small_noise, large_noise, medium_noise]
 feedbacks_types = ['endpos', 'endpos', 'endpos', 'endpos']
@@ -183,7 +183,7 @@ while running:
         
         elif attempts == trial_number[1]:
             perturbation_mode = True
-            perturbation_type = 'gradual'
+            perturbation_type = 'sudden'
             sequence_target =  NEXT_ANGLES[0]
             noise = noise_types[0]
             feedback = feedbacks_types[2]
@@ -203,7 +203,7 @@ while running:
             
         elif attempts == trial_number[4]:
             perturbation_mode = True
-            perturbation_type = 'gradual'
+            perturbation_type = 'sudden'
             sequence_target =  NEXT_ANGLES[1]
             noise = noise_types[1]
             feedback = feedbacks_types[2]
@@ -223,7 +223,7 @@ while running:
             
         elif attempts == trial_number[7]:
             perturbation_mode = True
-            perturbation_type = 'gradual'
+            perturbation_type = 'sudden'
             sequence_target =  NEXT_ANGLES[2]
             noise = noise_types[2]
             feedback = feedbacks_types[2]
@@ -242,7 +242,7 @@ while running:
             
         elif attempts == trial_number[10]:
             perturbation_mode = True
-            perturbation_type = 'gradual'
+            perturbation_type = 'sudden'
             sequence_target =  NEXT_ANGLES[3]
             noise = noise_types[3]
             feedback = feedbacks_types[2]
@@ -296,6 +296,9 @@ while running:
         elif (type(noise_types) == list) and (perturbation_type == 'gradual'):   
             gradual_step = np.min([np.ceil(gradual_attempts/3),10])
             perturbed_mouse_angle = mouse_angle + perturbation_lession - (gradual_step*perturbation_angle / 10)
+            
+        elif (type(noise_types) == list) and (perturbation_type == 'sudden'):
+            perturbed_mouse_angle = mouse_angle + perturbation_angle + perturbation_lession
             
         else:
             perturbed_mouse_angle = np.nan
