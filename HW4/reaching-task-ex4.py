@@ -28,7 +28,7 @@ MASK_RADIUS = 1 * TARGET_RADIUS
 ATTEMPTS_LIMIT = 320
 START_POSITION = (WIDTH // 2, HEIGHT // 2)
 START_ANGLE = 0
-PERTURBATION_ANGLE= 30
+PERTURBATION_ANGLE= 36 # in degrees
 TIME_LIMIT = 1000 # time limit in ms
 
 # Colors
@@ -73,21 +73,14 @@ perturbed_mouse_angle = 0
 gradual_step = 0
 gradual_attempts = 1
 perturbation_rand=random.uniform(-math.pi/4, +math.pi/4)
-""" Mean and Std for normal distribution in the lession condition """
-mean, std = 0, 1
-
-""" Weight the perturbation angles with a normal distribution """
-angles = np.linspace(-math.pi/4, math.pi/4, 100)
-""" Create  a normal distribution with mean and std """
-weights = stats.norm.pdf(angles, mean, std)
-perturbation_lession = rand.choices(angles, weights=weights, k=1)[0]
 
  # Lists to store important angles per attempt
 error_angles = [] 
 target_angles = []
 circle_angles = []
 target_pos = []
-perturbed_angels = []
+gradual_angels = []
+lession_perturbed = []
 """ Create a 2d list for solving the trajoctories per attempt. """
 trajactory = [[] for i in range(ATTEMPTS_LIMIT)]
 
@@ -95,8 +88,22 @@ trajactory = [[] for i in range(ATTEMPTS_LIMIT)]
 target_reached_bool = []
 
 #Choose experimental setup
-exp_setup='feedback' #'perturbation_types' (HW1),'generalization' (HW2,A),'interference' (HW2,B)
-feedbacks_types = ['no','trajectory', 'endpos', 'rl', 'trajectory']
+exp_setup='noise + feedback'
+
+# give mean and std
+small_noise = [0, 3]
+medium_noise = [1.5, 3]
+large_noise = [3, 4]
+
+noise_types = ['no', small_noise, large_noise, medium_noise]
+feedbacks_types = ['endpos', 'endpos', 'endpos', 'endpos']
+
+""" Weight the perturbation angles with a normal distribution """
+angles = np.linspace(-math.pi/4, math.pi/4, 100)
+""" Create  a normal distribution with mean and std """
+weights = stats.norm.pdf(angles, small_noise[0], small_noise[1])
+perturbation_lession = rand.choices(angles, weights=weights, k=1)[0]
+
 # Function to generate a new target position
 def generate_target_position():
     if target_mode == 'random':
@@ -149,116 +156,110 @@ while running:
             elif event.key == pygame.K_5: # Press '5' to end pertubation_mode
                 perturbation_mode = False
 
-    if exp_setup == 'feedback':
+    if exp_setup == 'noise + feedback':
         #TASK 1: DESIGN YOUR OWN EXPERIMENT (HW2_A OR HW2_B)      
         # Design experiment A
         
         trial_number = [0, 20, 80, 100,
                         120, 180, 200,
                         220, 280, 300,
-                        320, 380, 400,
-                        420, 480, 500]
+                        320, 380, 400]
         
-        NEXT_ANGLES = [40, -30,  70, -20, 45]
+        NEXT_ANGLES = [40, -30,  70, -20]
         
         """ Tripel every element and flatten the list """
         Collected_angels = sum([[i] * 3 for i in NEXT_ANGLES],[])
+        Collected_feedbacks = sum([[i] * 3 for i in feedbacks_types],[])
+        Collected_noises = sum([[i] * 3 for i in noise_types],[])
         
-        #trial_number = (np.array(trial_number) // 20).tolist()
+        trial_number = (np.array(trial_number) // 20).tolist()
         
         """ Block 0 """
         if attempts == trial_number[0]:
             perturbation_mode = False
             sequence_target =  NEXT_ANGLES[0]
-            feedback = feedbacks_types[0]
+            noise = noise_types[0]
+            feedback = feedbacks_types[2]
         
         elif attempts == trial_number[1]:
             perturbation_mode = True
             perturbation_type = 'gradual'
             sequence_target =  NEXT_ANGLES[0]
-            feedback = feedbacks_types[0]
+            noise = noise_types[0]
+            feedback = feedbacks_types[2]
         
         elif attempts == trial_number[2]:
             perturbation_mode = False
             sequence_target =  NEXT_ANGLES[0]
-            feedback = feedbacks_types[0]
+            noise = noise_types[0]
+            feedback = feedbacks_types[2]
             
             """ Block 1 """
         elif attempts == trial_number[3]:
             perturbation_mode = False
             sequence_target =  NEXT_ANGLES[1]
-            feedback = feedbacks_types[1]
+            noise = noise_types[1]
+            feedback = feedbacks_types[2]
             
         elif attempts == trial_number[4]:
             perturbation_mode = True
             perturbation_type = 'gradual'
             sequence_target =  NEXT_ANGLES[1]
-            feedback = feedbacks_types[1]
+            noise = noise_types[1]
+            feedback = feedbacks_types[2]
             
         elif attempts == trial_number[5]:
             perturbation_mode = False
             sequence_target =  NEXT_ANGLES[1]
-            feedback = feedbacks_types[1]
+            noise = noise_types[1]
+            feedback = feedbacks_types[2]
             
             """ Block 2 """
         elif attempts == trial_number[6]:
             perturbation_mode = False
             sequence_target =  NEXT_ANGLES[2]
+            noise = noise_types[2]
             feedback = feedbacks_types[2]
             
         elif attempts == trial_number[7]:
             perturbation_mode = True
             perturbation_type = 'gradual'
             sequence_target =  NEXT_ANGLES[2]
+            noise = noise_types[2]
             feedback = feedbacks_types[2]
         
         elif attempts == trial_number[8]:
             perturbation_mode = False
             sequence_target =  NEXT_ANGLES[2]
-            feedback = feedbacks_types[2]
+            noise = noise_types[2]
             
             """ Block 3 """
         elif attempts == trial_number[9]:
             perturbation_mode = False
             sequence_target =  NEXT_ANGLES[3]
-            feedback = feedbacks_types[3]
+            noise = noise_types[3]
+            feedback = feedbacks_types[2]
             
         elif attempts == trial_number[10]:
             perturbation_mode = True
             perturbation_type = 'gradual'
             sequence_target =  NEXT_ANGLES[3]
-            feedback = feedbacks_types[3]
+            noise = noise_types[3]
+            feedback = feedbacks_types[2]
         
         elif attempts == trial_number[11]:
             perturbation_mode = False
             sequence_target =  NEXT_ANGLES[3]
-            feedback = feedbacks_types[3]
+            noise = noise_types[3]
+            feedback = feedbacks_types[2]
         
-            """ Block 4 """
-        elif attempts == trial_number[12]:
-            perturbation_mode = False
-            sequence_target =  NEXT_ANGLES[4]
-            feedback = feedbacks_types[4]
-        
-        elif attempts == trial_number[13]:
-            perturbation_mode = True
-            perturbation_type = 'lession'
-            sequence_target =  NEXT_ANGLES[4]
-            feedback = feedbacks_types[4]
-        
-        elif attempts == trial_number[14]:
-            perturbation_mode = False
-            sequence_target =  NEXT_ANGLES[4]
-            feedback = feedbacks_types[4]      
-        
-        elif attempts >= trial_number[14]:
+        elif attempts >= trial_number[11]:
             running = False 
         
         
         """ Numbers of attempts for each perturbation type """
         number_attempts = np.array(trial_number[1:]) - np.array(trial_number[:-1])
         string_attempts = ['No Perturbation', 'Gradual Perturbation', 'Aftereffect',
-                           'No Perturbation', 'Gradual Perturbation', 'Aftereffect',
                            'No Perturbation', 'Gradual Perturbation', 'Aftereffect',
                            'No Perturbation', 'Gradual Perturbation', 'Aftereffect',
                            'No Perturbation', 'Gradual Perturbation', 'Aftereffect']  
@@ -285,15 +286,16 @@ while running:
         if perturbation_type == 'sudden':
             perturbed_mouse_angle = mouse_angle + perturbation_angle
 
-        elif perturbation_type == 'gradual':   
+        elif (perturbation_type == 'gradual') and noise == 'no':   
             gradual_step = np.min([np.ceil(gradual_attempts/3),10])
-            perturbed_mouse_angle = mouse_angle - (gradual_step*perturbation_angle / 10);  
+            perturbed_mouse_angle = mouse_angle - (gradual_step*perturbation_angle / 10) 
         
         elif perturbation_type == 'random':   
             perturbed_mouse_angle = mouse_angle + perturbation_rand 
             
-        elif perturbation_type == 'lession':   
-            perturbed_mouse_angle = mouse_angle + perturbation_lession
+        elif (type(noise_types) == list) and (perturbation_type == 'gradual'):   
+            gradual_step = np.min([np.ceil(gradual_attempts/3),10])
+            perturbed_mouse_angle = mouse_angle + perturbation_lession - (gradual_step*perturbation_angle / 10)
             
         else:
             perturbed_mouse_angle = np.nan
@@ -335,7 +337,8 @@ while running:
         target_angles.append(target_angle)
         circle_angles.append(circle_end_angle)
         error_angles.append(error_angle)
-        perturbed_angels.append(perturbed_mouse_angle)
+        gradual_angels.append(gradual_step)
+        lession_perturbed.append(perturbation_lession)
 
         new_target = None  # Set target to None to indicate hit
         start_time = 0  # Reset start_time after hitting the target
@@ -364,7 +367,8 @@ while running:
         target_angles.append(target_angle)
         circle_angles.append(circle_end_angle)
         error_angles.append(error_angle)
-        perturbed_angels.append(perturbed_mouse_angle)
+        gradual_angels.append(gradual_step)
+        lession_perturbed.append(perturbation_lession)
 
         new_target = None  # Set target to None to indicate miss
         start_time = 0  # Reset start_time after missing the target
@@ -385,11 +389,16 @@ while running:
         """ Task 4: Create a perturbation angle drawn from a normal distribution with mean and std""" 
     
         
-        """ Weight the perturbation angles with a normal distribution """
-        angles = np.linspace(-math.pi/4, math.pi/4, 100)
-        """ Create  a normal distribution with mean and std """
-        weights = stats.norm.pdf(angles, mean, std)
-        perturbation_lession = rand.choices(angles, weights=weights, k=1)[0]
+        if type(noise) == list:
+            """ Weight the perturbation angles with a normal distribution """
+            angles = np.linspace(-math.pi/4, math.pi/4, 100)
+            """ Create  a normal distribution with mean and std """
+            weights = stats.norm.pdf(angles, noise[0], noise[1])
+            
+            perturbation_lession = rand.choices(angles, weights=weights, k=1)[0]
+            
+        elif noise == 'no':
+            perturbation_lession = 0
         
         
 
@@ -408,10 +417,11 @@ while running:
         screen.blit(text, text_rect)
 
     """ Draw the different feedback types"""
-    if feedback == 'trajectory':
-        draw_old_trajactory(trajactory, attempts, screen)
-    elif feedback == 'endpos':
-        pygame.draw.circle(screen, WHITE, trajactory[attempts-1][-1], CIRCLE_SIZE // 2)
+    if attempts > 0:
+        if feedback == 'trajectory':
+            draw_old_trajactory(trajactory, attempts, screen)
+        elif feedback == 'endpos':
+            pygame.draw.circle(screen, WHITE, trajactory[attempts-1][-1], CIRCLE_SIZE // 2)
         
 # Generate playing field
     # Draw current target
@@ -481,34 +491,33 @@ if not test_mode:
     for trial, number in zip(string_attempts, number_attempts):
         string_trials += [trial] * number
         
+    changed_feedbacks = []
+    for feedback, number in zip(Collected_feedbacks, number_attempts):
+        changed_feedbacks += [feedback] * number
+        
+    changed_noises = []
+    for noise, number in zip(Collected_noises, number_attempts):
+        changed_noises += [noise] * number
+    
+    changed_angles = []            
+    for angel, number in zip(Collected_angels, number_attempts):
+        changed_angles += [angel] * number
+    
+    data = {'subject_name': [subject_name] * len(string_trials),
+            'target_mode': [target_mode] * len(string_trials),
+            'perturbation_type': [perturbation_type] * len(string_trials),
+            'trial_number': np.arange(1, len(string_trials)+1),
+            'trial_name' : string_trials,
+            'target_pos': target_pos,
+            'feedback': changed_feedbacks,
+            'noise': changed_noises,
+            'changed_angels': changed_angles,
+            'error_angles': error_angles,
+            'gradual_angels': gradual_angels,
+            'lession_perturbed': lession_perturbed,
 
-    if NEXT_ANGLES != []:
-        changed_angles = []
-        
-        for angel, number in zip(Collected_angels, number_attempts):
-            changed_angles += [angel] * number
-        
-        data = {'subject_name': [subject_name] * len(string_trials),
-                'target_mode': [target_mode] * len(string_trials),
-                'perturbation_type': [perturbation_type] * len(string_trials),
-                'trial_number': np.arange(1, len(string_trials)+1),
-                'trial_name' : string_trials,
-                'target_pos': target_pos,
-                'changed_angels': changed_angles,
-                'error_angles': error_angles,
-                'perturbed_angels': perturbed_angels
-                }
-    else:
-        data = {'subject_name': [subject_name] * len(string_trials),
-                'target_mode': [target_mode] * len(string_trials),
-                'perturbation_type': [perturbation_type] * len(string_trials),
-                'trial_number': np.arange(1, len(string_trials)+1),
-                'trial_name' : string_trials,
-                'target_pos': target_pos,
-                'error_angles': error_angles,
-                'perturbed_angels': perturbed_angels
-                }
-        
+            }
+
     # TASK 2 GENERATE A BETTER PLOT
 
 

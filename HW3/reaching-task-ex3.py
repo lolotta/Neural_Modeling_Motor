@@ -96,7 +96,7 @@ target_reached_bool = []
 
 #Choose experimental setup
 exp_setup='feedback' #'perturbation_types' (HW1),'generalization' (HW2,A),'interference' (HW2,B)
-feedbacks_types = ['no','trajectory', 'endpos', 'rl', 'trajectory']
+feedbacks_types = ['no','trajectory', 'endpos', 'rl']
 # Function to generate a new target position
 def generate_target_position():
     if target_mode == 'random':
@@ -156,15 +156,15 @@ while running:
         trial_number = [0, 20, 80, 100,
                         120, 180, 200,
                         220, 280, 300,
-                        320, 380, 400,
-                        420, 480, 500]
+                        320, 380, 400]
         
-        NEXT_ANGLES = [40, -30,  70, -20, 45]
+        NEXT_ANGLES = [40, -30,  70, -20]
         
         """ Tripel every element and flatten the list """
         Collected_angels = sum([[i] * 3 for i in NEXT_ANGLES],[])
+        Collected_feedbacks = sum([[i] * 3 for i in feedbacks_types],[])
         
-        #trial_number = (np.array(trial_number) // 20).tolist()
+        trial_number = (np.array(trial_number) // 20).tolist()
         
         """ Block 0 """
         if attempts == trial_number[0]:
@@ -234,31 +234,13 @@ while running:
             sequence_target =  NEXT_ANGLES[3]
             feedback = feedbacks_types[3]
         
-            """ Block 4 """
-        elif attempts == trial_number[12]:
-            perturbation_mode = False
-            sequence_target =  NEXT_ANGLES[4]
-            feedback = feedbacks_types[4]
-        
-        elif attempts == trial_number[13]:
-            perturbation_mode = True
-            perturbation_type = 'lession'
-            sequence_target =  NEXT_ANGLES[4]
-            feedback = feedbacks_types[4]
-        
-        elif attempts == trial_number[14]:
-            perturbation_mode = False
-            sequence_target =  NEXT_ANGLES[4]
-            feedback = feedbacks_types[4]      
-        
-        elif attempts >= trial_number[14]:
+        elif attempts >= trial_number[11]:
             running = False 
         
         
         """ Numbers of attempts for each perturbation type """
         number_attempts = np.array(trial_number[1:]) - np.array(trial_number[:-1])
         string_attempts = ['No Perturbation', 'Gradual Perturbation', 'Aftereffect',
-                           'No Perturbation', 'Gradual Perturbation', 'Aftereffect',
                            'No Perturbation', 'Gradual Perturbation', 'Aftereffect',
                            'No Perturbation', 'Gradual Perturbation', 'Aftereffect',
                            'No Perturbation', 'Gradual Perturbation', 'Aftereffect']  
@@ -291,10 +273,7 @@ while running:
         
         elif perturbation_type == 'random':   
             perturbed_mouse_angle = mouse_angle + perturbation_rand 
-            
-        elif perturbation_type == 'lession':   
-            perturbed_mouse_angle = mouse_angle + perturbation_lession
-            
+                        
         else:
             perturbed_mouse_angle = np.nan
     
@@ -335,7 +314,7 @@ while running:
         target_angles.append(target_angle)
         circle_angles.append(circle_end_angle)
         error_angles.append(error_angle)
-        perturbed_angels.append(perturbed_mouse_angle)
+        perturbed_angels.append(gradual_step)
 
         new_target = None  # Set target to None to indicate hit
         start_time = 0  # Reset start_time after hitting the target
@@ -364,7 +343,7 @@ while running:
         target_angles.append(target_angle)
         circle_angles.append(circle_end_angle)
         error_angles.append(error_angle)
-        perturbed_angels.append(perturbed_mouse_angle)
+        perturbed_angels.append(gradual_step)
 
         new_target = None  # Set target to None to indicate miss
         start_time = 0  # Reset start_time after missing the target
@@ -408,10 +387,11 @@ while running:
         screen.blit(text, text_rect)
 
     """ Draw the different feedback types"""
-    if feedback == 'trajectory':
-        draw_old_trajactory(trajactory, attempts, screen)
-    elif feedback == 'endpos':
-        pygame.draw.circle(screen, WHITE, trajactory[attempts-1][-1], CIRCLE_SIZE // 2)
+    if attempts > 0:
+        if feedback == 'trajectory':
+            draw_old_trajactory(trajactory, attempts, screen)
+        elif feedback == 'endpos':
+            pygame.draw.circle(screen, WHITE, trajactory[attempts-1][-1], CIRCLE_SIZE // 2)
         
 # Generate playing field
     # Draw current target
@@ -481,33 +461,26 @@ if not test_mode:
     for trial, number in zip(string_attempts, number_attempts):
         string_trials += [trial] * number
         
+    changed_feedbacks = []
+    for feedback, number in zip(Collected_feedbacks, number_attempts):
+        changed_feedbacks += [feedback] * number
+    
+    changed_angles = []
+    for angel, number in zip(Collected_angels, number_attempts):
+        changed_angles += [angel] * number
+    
+    data = {'subject_name': [subject_name] * len(string_trials),
+            'target_mode': [target_mode] * len(string_trials),
+            'perturbation_type': [perturbation_type] * len(string_trials),
+            'trial_number': np.arange(1, len(string_trials)+1),
+            'trial_name' : string_trials,
+            'feedback_type': changed_feedbacks,
+            'target_pos': target_pos,
+            'changed_angels': changed_angles,
+            'error_angles': error_angles,
+            'perturbed_angels': perturbed_angels
+            }
 
-    if NEXT_ANGLES != []:
-        changed_angles = []
-        
-        for angel, number in zip(Collected_angels, number_attempts):
-            changed_angles += [angel] * number
-        
-        data = {'subject_name': [subject_name] * len(string_trials),
-                'target_mode': [target_mode] * len(string_trials),
-                'perturbation_type': [perturbation_type] * len(string_trials),
-                'trial_number': np.arange(1, len(string_trials)+1),
-                'trial_name' : string_trials,
-                'target_pos': target_pos,
-                'changed_angels': changed_angles,
-                'error_angles': error_angles,
-                'perturbed_angels': perturbed_angels
-                }
-    else:
-        data = {'subject_name': [subject_name] * len(string_trials),
-                'target_mode': [target_mode] * len(string_trials),
-                'perturbation_type': [perturbation_type] * len(string_trials),
-                'trial_number': np.arange(1, len(string_trials)+1),
-                'trial_name' : string_trials,
-                'target_pos': target_pos,
-                'error_angles': error_angles,
-                'perturbed_angels': perturbed_angels
-                }
         
     # TASK 2 GENERATE A BETTER PLOT
 
