@@ -13,7 +13,7 @@ import scipy.stats as stats
 # Subject name
 subject_name = "Dulli"
 # Game parameters
-experimenter = "Flo"
+experimenter = "Lotta"
 if experimenter == "Lotta":
     SCREEN_X, SCREEN_Y = 1920, 1080 # your screen resolution
     WIDTH, HEIGHT = SCREEN_X // 1.25  , SCREEN_Y // 1.25 # be aware of monitor scaling on windows (150%)
@@ -164,7 +164,7 @@ while running:
         Collected_angels = sum([[i] * 3 for i in NEXT_ANGLES],[])
         Collected_feedbacks = sum([[i] * 3 for i in feedbacks_types],[])
         
-        trial_number = (np.array(trial_number) // 20).tolist()
+        trial_number = (np.array(trial_number) // 10).tolist()
         
         """ Block 0 """
         if attempts == trial_number[0]:
