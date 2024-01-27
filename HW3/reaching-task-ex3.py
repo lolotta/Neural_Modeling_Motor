@@ -11,7 +11,7 @@ import random as rand
 import scipy.stats as stats
 
 # Subject name
-subject_name = "Dulli"
+subject_name = "Helenö"
 # Game parameters
 experimenter = "Lotta"
 if experimenter == "Lotta":
@@ -25,7 +25,7 @@ CIRCLE_SIZE = 20
 TARGET_SIZE = CIRCLE_SIZE * 1.5
 TARGET_RADIUS = 300
 MASK_RADIUS = 1 * TARGET_RADIUS
-ATTEMPTS_LIMIT = 320
+ATTEMPTS_LIMIT = 400
 START_POSITION = (WIDTH // 2, HEIGHT // 2)
 START_ANGLE = 0
 PERTURBATION_ANGLE= 30
@@ -165,7 +165,7 @@ while running:
         Collected_angels = sum([[i] * 3 for i in NEXT_ANGLES],[])
         Collected_feedbacks = sum([[i] * 3 for i in feedbacks_types],[])
         
-        #trial_number = (np.array(trial_number) // 10).tolist()
+        #trial_number = (np.array(trial_number) // 5).tolist()
         
         """ Block 0 """
         if attempts == trial_number[0]:
@@ -254,7 +254,7 @@ while running:
     mouse_pos = pygame.mouse.get_pos()
     
     if new_target:
-        trajactory[attempts] += [mouse_pos]
+        trajactory[attempts] += [circle_pos]
 
     # Calculate distance from START_POSITION to mouse_pos
     deltax = mouse_pos[0] - START_POSITION[0]
@@ -496,7 +496,7 @@ if not test_mode:
     if not os.path.exists('Savings'):
         os.makedirs('Savings')
     
-    df.to_csv('Savings/error_angles_{}.csv'.format(subject_name), header=True, index=False, 
+    df.to_csv('HW3/Savings/error_angles_{}.csv'.format(subject_name), header=True, index=False, 
               na_rep=np.NaN)
 
 
