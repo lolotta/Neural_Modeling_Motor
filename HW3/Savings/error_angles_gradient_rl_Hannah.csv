@@ -99,14 +99,14 @@ Hannah,sequence,gradual,97,Aftereffect,rl,"[960.8362829059618, 202.1866670643066
 Hannah,sequence,gradual,98,Aftereffect,rl,"[960.8362829059618, 202.1866670643066]",40,-0.053543044853009536,10.0
 Hannah,sequence,gradual,99,Aftereffect,rl,"[960.8362829059618, 202.1866670643066]",40,-0.08684821927617326,10.0
 Hannah,sequence,gradual,100,Aftereffect,rl,"[960.8362829059618, 202.1866670643066]",40,-0.03843235912813514,10.0
-Hannah,sequence,gradual,101,No Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.16651768476833917,10.0
+Hannah,sequence,gradual,101,No Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.26651768476833917,10.0
 Hannah,sequence,gradual,102,No Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.08839237030209235,10.0
 Hannah,sequence,gradual,103,No Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,0.001980478501911964,10.0
 Hannah,sequence,gradual,104,No Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,0.09598362847157405,10.0
 Hannah,sequence,gradual,105,No Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.12504367606824518,10.0
 Hannah,sequence,gradual,106,No Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.03096559190507797,10.0
 Hannah,sequence,gradual,107,No Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.10073535161147706,10.0
-Hannah,sequence,gradual,108,No Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,0.6844487153868004,10.0
+Hannah,sequence,gradual,108,No Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,0.0844487153868004,10.0
 Hannah,sequence,gradual,109,No Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.13608013761855187,10.0
 Hannah,sequence,gradual,110,No Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,0.008900670836482494,10.0
 Hannah,sequence,gradual,111,No Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,0.0091474625392709,10.0
@@ -179,8 +179,8 @@ Hannah,sequence,gradual,177,Gradual Perturbation,rl-gradient,"[618.0, 172.192378
 Hannah,sequence,gradual,178,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,0.048593933257611965,10.0
 Hannah,sequence,gradual,179,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,0.03810471414712113,10.0
 Hannah,sequence,gradual,180,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,0.01999733397315051,10.0
-Hannah,sequence,gradual,181,Aftereffect,rl-gradient,"[618.0, 172.1923788646684]",-30,0.07248532910358474,10.0
-Hannah,sequence,gradual,182,Aftereffect,rl-gradient,"[618.0, 172.1923788646684]",-30,0.003303676794198296,10.0
+Hannah,sequence,gradual,181,Aftereffect,rl-gradient,"[618.0, 172.1923788646684]",-30,0.19248532910358474,10.0
+Hannah,sequence,gradual,182,Aftereffect,rl-gradient,"[618.0, 172.1923788646684]",-30,0.103303676794198296,10.0
 Hannah,sequence,gradual,183,Aftereffect,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.08410183148630201,10.0
 Hannah,sequence,gradual,184,Aftereffect,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.019590800689529342,10.0
 Hannah,sequence,gradual,185,Aftereffect,rl-gradient,"[618.0, 172.1923788646684]",-30,0.06134586583264534,10.0
