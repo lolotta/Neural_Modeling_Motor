@@ -11,7 +11,7 @@ import random as rand
 import scipy.stats as stats
 
 # Subject name
-subject_name = "Dulli"
+subject_name = "Hannah"
 # Game parameters
 experimenter = "Lotta"
 if experimenter == "Lotta":

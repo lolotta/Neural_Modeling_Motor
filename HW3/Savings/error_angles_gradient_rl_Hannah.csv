@@ -1,0 +1,201 @@
+subject_name,target_mode,perturbation_type,trial_number,trial_name,feedback_type,target_pos,changed_angels,error_angles,perturbed_angels
+Hannah,sequence,gradual,1,No Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.06223723288689065,0.0
+Hannah,sequence,gradual,2,No Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,0.03826520792335952,0.0
+Hannah,sequence,gradual,3,No Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.07856064076238611,0.0
+Hannah,sequence,gradual,4,No Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.014235368406236626,0.0
+Hannah,sequence,gradual,5,No Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,0.10666438195547068,0.0
+Hannah,sequence,gradual,6,No Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.01761047613051736,0.0
+Hannah,sequence,gradual,7,No Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,0.054068331937708214,0.0
+Hannah,sequence,gradual,8,No Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.09086849773508276,0.0
+Hannah,sequence,gradual,9,No Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,0.021857718594229247,0.0
+Hannah,sequence,gradual,10,No Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,0.15499640337245157,0.0
+Hannah,sequence,gradual,11,No Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.08609098565410545,0.0
+Hannah,sequence,gradual,12,No Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.28733156376659186,0.0
+Hannah,sequence,gradual,13,No Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.1870997825004923,0.0
+Hannah,sequence,gradual,14,No Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.030667137430335334,0.0
+Hannah,sequence,gradual,15,No Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,0.14167892989906383,0.0
+Hannah,sequence,gradual,16,No Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,0.0655736135130085,0.0
+Hannah,sequence,gradual,17,No Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,0.02874749445085789,0.0
+Hannah,sequence,gradual,18,No Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.05517318554859496,0.0
+Hannah,sequence,gradual,19,No Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.0014372455625814018,0.0
+Hannah,sequence,gradual,20,No Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,0.06401483978925371,0.0
+Hannah,sequence,gradual,21,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.049560152605118035,1.0
+Hannah,sequence,gradual,22,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.09806213538444064,1.0
+Hannah,sequence,gradual,23,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.32053907670277204,1.0
+Hannah,sequence,gradual,24,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,0.07472174503651852,2.0
+Hannah,sequence,gradual,25,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.013651029474592513,2.0
+Hannah,sequence,gradual,26,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,0.005356439024540527,2.0
+Hannah,sequence,gradual,27,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.09306479289023573,3.0
+Hannah,sequence,gradual,28,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.10481832034447369,3.0
+Hannah,sequence,gradual,29,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.2051313722309207,3.0
+Hannah,sequence,gradual,30,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.21249960151936054,4.0
+Hannah,sequence,gradual,31,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.16042393212284933,4.0
+Hannah,sequence,gradual,32,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.23233472871530902,4.0
+Hannah,sequence,gradual,33,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.16653309585954612,5.0
+Hannah,sequence,gradual,34,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.19619018836394675,5.0
+Hannah,sequence,gradual,35,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.13600324992199875,5.0
+Hannah,sequence,gradual,36,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.07152854890772942,6.0
+Hannah,sequence,gradual,37,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.10509680177367509,6.0
+Hannah,sequence,gradual,38,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.2355281666916722,6.0
+Hannah,sequence,gradual,39,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.3117993229372147,7.0
+Hannah,sequence,gradual,40,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.2626796122064752,7.0
+Hannah,sequence,gradual,41,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.2248402130197451,7.0
+Hannah,sequence,gradual,42,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.42901644174891707,8.0
+Hannah,sequence,gradual,43,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.19199730193868159,8.0
+Hannah,sequence,gradual,44,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.23212359990514364,8.0
+Hannah,sequence,gradual,45,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.2658804070196581,9.0
+Hannah,sequence,gradual,46,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.2856445214661971,9.0
+Hannah,sequence,gradual,47,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.2861042851431199,9.0
+Hannah,sequence,gradual,48,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.12809444961526828,10.0
+Hannah,sequence,gradual,49,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.2559721420790504,10.0
+Hannah,sequence,gradual,50,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.07799832392296058,10.0
+Hannah,sequence,gradual,51,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.12465698442607986,10.0
+Hannah,sequence,gradual,52,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.3339722794459987,10.0
+Hannah,sequence,gradual,53,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.30362738294271896,10.0
+Hannah,sequence,gradual,54,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.2025891321296811,10.0
+Hannah,sequence,gradual,55,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.3127293864975451,10.0
+Hannah,sequence,gradual,56,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.3553134691507973,10.0
+Hannah,sequence,gradual,57,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.307749439475552,10.0
+Hannah,sequence,gradual,58,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.3770546604467677,10.0
+Hannah,sequence,gradual,59,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.1972332745647889,10.0
+Hannah,sequence,gradual,60,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.3504282555093934,10.0
+Hannah,sequence,gradual,61,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.4571145399265786,10.0
+Hannah,sequence,gradual,62,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.33223237488898305,10.0
+Hannah,sequence,gradual,63,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.33805835974257303,10.0
+Hannah,sequence,gradual,64,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.27118363558395564,10.0
+Hannah,sequence,gradual,65,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.381620236081919,10.0
+Hannah,sequence,gradual,66,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.39372246030193425,10.0
+Hannah,sequence,gradual,67,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.3181446411385289,10.0
+Hannah,sequence,gradual,68,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.4592927867489489,10.0
+Hannah,sequence,gradual,69,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.16818333283175302,10.0
+Hannah,sequence,gradual,70,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.4265287055192861,10.0
+Hannah,sequence,gradual,71,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.31811221080969676,10.0
+Hannah,sequence,gradual,72,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.22356648627675257,10.0
+Hannah,sequence,gradual,73,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.29246675700006053,10.0
+Hannah,sequence,gradual,74,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.3786596201057064,10.0
+Hannah,sequence,gradual,75,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.14504023602869665,10.0
+Hannah,sequence,gradual,76,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.4432927574349088,10.0
+Hannah,sequence,gradual,77,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.47942676570337284,10.0
+Hannah,sequence,gradual,78,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.34941492329496726,10.0
+Hannah,sequence,gradual,79,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.3702962055705312,10.0
+Hannah,sequence,gradual,80,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.3064702607698484,10.0
+Hannah,sequence,gradual,81,Aftereffect,rl,"[960.8362829059618, 202.1866670643066]",40,-0.029703141853950732,10.0
+Hannah,sequence,gradual,82,Aftereffect,rl,"[960.8362829059618, 202.1866670643066]",40,-0.00933909961426338,10.0
+Hannah,sequence,gradual,83,Aftereffect,rl,"[960.8362829059618, 202.1866670643066]",40,-0.01924713588029603,10.0
+Hannah,sequence,gradual,84,Aftereffect,rl,"[960.8362829059618, 202.1866670643066]",40,0.028510639883993827,10.0
+Hannah,sequence,gradual,85,Aftereffect,rl,"[960.8362829059618, 202.1866670643066]",40,-0.05957187359175886,10.0
+Hannah,sequence,gradual,86,Aftereffect,rl,"[960.8362829059618, 202.1866670643066]",40,0.1391386238564828,10.0
+Hannah,sequence,gradual,87,Aftereffect,rl,"[960.8362829059618, 202.1866670643066]",40,-0.03140408346390733,10.0
+Hannah,sequence,gradual,88,Aftereffect,rl,"[960.8362829059618, 202.1866670643066]",40,-0.007685243743039805,10.0
+Hannah,sequence,gradual,89,Aftereffect,rl,"[960.8362829059618, 202.1866670643066]",40,nan,10.0
+Hannah,sequence,gradual,90,Aftereffect,rl,"[960.8362829059618, 202.1866670643066]",40,0.07712482248331864,10.0
+Hannah,sequence,gradual,91,Aftereffect,rl,"[960.8362829059618, 202.1866670643066]",40,-0.037660941729976916,10.0
+Hannah,sequence,gradual,92,Aftereffect,rl,"[960.8362829059618, 202.1866670643066]",40,0.11907391339487972,10.0
+Hannah,sequence,gradual,93,Aftereffect,rl,"[960.8362829059618, 202.1866670643066]",40,0.053168373208216324,10.0
+Hannah,sequence,gradual,94,Aftereffect,rl,"[960.8362829059618, 202.1866670643066]",40,0.09487087875340994,10.0
+Hannah,sequence,gradual,95,Aftereffect,rl,"[960.8362829059618, 202.1866670643066]",40,0.11879589926544487,10.0
+Hannah,sequence,gradual,96,Aftereffect,rl,"[960.8362829059618, 202.1866670643066]",40,0.12136455199121687,10.0
+Hannah,sequence,gradual,97,Aftereffect,rl,"[960.8362829059618, 202.1866670643066]",40,0.04599726859317799,10.0
+Hannah,sequence,gradual,98,Aftereffect,rl,"[960.8362829059618, 202.1866670643066]",40,-0.053543044853009536,10.0
+Hannah,sequence,gradual,99,Aftereffect,rl,"[960.8362829059618, 202.1866670643066]",40,-0.08684821927617326,10.0
+Hannah,sequence,gradual,100,Aftereffect,rl,"[960.8362829059618, 202.1866670643066]",40,-0.03843235912813514,10.0
+Hannah,sequence,gradual,101,No Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.16651768476833917,10.0
+Hannah,sequence,gradual,102,No Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.08839237030209235,10.0
+Hannah,sequence,gradual,103,No Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,0.001980478501911964,10.0
+Hannah,sequence,gradual,104,No Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,0.09598362847157405,10.0
+Hannah,sequence,gradual,105,No Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.12504367606824518,10.0
+Hannah,sequence,gradual,106,No Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.03096559190507797,10.0
+Hannah,sequence,gradual,107,No Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.10073535161147706,10.0
+Hannah,sequence,gradual,108,No Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,0.6844487153868004,10.0
+Hannah,sequence,gradual,109,No Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.13608013761855187,10.0
+Hannah,sequence,gradual,110,No Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,0.008900670836482494,10.0
+Hannah,sequence,gradual,111,No Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,0.0091474625392709,10.0
+Hannah,sequence,gradual,112,No Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.11472103241074727,10.0
+Hannah,sequence,gradual,113,No Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.12702810332141867,10.0
+Hannah,sequence,gradual,114,No Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,0.008420894490809072,10.0
+Hannah,sequence,gradual,115,No Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.11803201118632334,10.0
+Hannah,sequence,gradual,116,No Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.0018387621041204838,10.0
+Hannah,sequence,gradual,117,No Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.06186361326060963,10.0
+Hannah,sequence,gradual,118,No Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.053718571228272616,10.0
+Hannah,sequence,gradual,119,No Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.05291008123423824,10.0
+Hannah,sequence,gradual,120,No Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.07754943351922217,10.0
+Hannah,sequence,gradual,121,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.47689186766553515,10.0
+Hannah,sequence,gradual,122,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.3816989823907164,10.0
+Hannah,sequence,gradual,123,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,0.2770610138912555,10.0
+Hannah,sequence,gradual,124,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,0.05425978706845935,10.0
+Hannah,sequence,gradual,125,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,0.13234873367848454,10.0
+Hannah,sequence,gradual,126,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.06261397002470526,10.0
+Hannah,sequence,gradual,127,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.07801722063845995,10.0
+Hannah,sequence,gradual,128,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,0.08132493912701921,10.0
+Hannah,sequence,gradual,129,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.21866894587394192,10.0
+Hannah,sequence,gradual,130,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.3656248197882803,10.0
+Hannah,sequence,gradual,131,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.2769421937755694,10.0
+Hannah,sequence,gradual,132,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.07971239399123675,10.0
+Hannah,sequence,gradual,133,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.07416711383142882,10.0
+Hannah,sequence,gradual,134,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.23321449997710575,10.0
+Hannah,sequence,gradual,135,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.12554973710852568,10.0
+Hannah,sequence,gradual,136,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,0.11694249352932662,10.0
+Hannah,sequence,gradual,137,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.22390450013034968,10.0
+Hannah,sequence,gradual,138,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.27505555035331186,10.0
+Hannah,sequence,gradual,139,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.17356067667977815,10.0
+Hannah,sequence,gradual,140,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.09366452169895423,10.0
+Hannah,sequence,gradual,141,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.009553849437597517,10.0
+Hannah,sequence,gradual,142,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.02083032003621721,10.0
+Hannah,sequence,gradual,143,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.2112912746295046,10.0
+Hannah,sequence,gradual,144,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.13512323780424174,10.0
+Hannah,sequence,gradual,145,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.17670885607003672,10.0
+Hannah,sequence,gradual,146,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,0.0323270427557234,10.0
+Hannah,sequence,gradual,147,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,0.08340733087098418,10.0
+Hannah,sequence,gradual,148,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,0.1223629653091658,10.0
+Hannah,sequence,gradual,149,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.11343499180721661,10.0
+Hannah,sequence,gradual,150,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.058928743343430234,10.0
+Hannah,sequence,gradual,151,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.0031948773085752613,10.0
+Hannah,sequence,gradual,152,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.18174306294357034,10.0
+Hannah,sequence,gradual,153,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.4057414037526992,10.0
+Hannah,sequence,gradual,154,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.3471853812341177,10.0
+Hannah,sequence,gradual,155,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,0.23036431903963095,10.0
+Hannah,sequence,gradual,156,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,0.061411355168556,10.0
+Hannah,sequence,gradual,157,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,0.06261397002470526,10.0
+Hannah,sequence,gradual,158,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,0.011975475395680224,10.0
+Hannah,sequence,gradual,159,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.0028901653631403512,10.0
+Hannah,sequence,gradual,160,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,0.07017213375629261,10.0
+Hannah,sequence,gradual,161,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.005899636566780053,10.0
+Hannah,sequence,gradual,162,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,0.0628103526541004,10.0
+Hannah,sequence,gradual,163,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.1119222426369868,10.0
+Hannah,sequence,gradual,164,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.11780941709794135,10.0
+Hannah,sequence,gradual,165,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.08526286944052952,10.0
+Hannah,sequence,gradual,166,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.17930344484245264,10.0
+Hannah,sequence,gradual,167,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.27051338699322347,10.0
+Hannah,sequence,gradual,168,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.29172424566164823,10.0
+Hannah,sequence,gradual,169,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.07022074493488129,10.0
+Hannah,sequence,gradual,170,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.25442605646527605,10.0
+Hannah,sequence,gradual,171,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.20625533983773625,10.0
+Hannah,sequence,gradual,172,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.25831120642101,10.0
+Hannah,sequence,gradual,173,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.36869590265804986,10.0
+Hannah,sequence,gradual,174,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.18177183122940388,10.0
+Hannah,sequence,gradual,175,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,0.07065144038781979,10.0
+Hannah,sequence,gradual,176,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,0.07065144038781979,10.0
+Hannah,sequence,gradual,177,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,0.013244258664729003,10.0
+Hannah,sequence,gradual,178,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,0.048593933257611965,10.0
+Hannah,sequence,gradual,179,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,0.03810471414712113,10.0
+Hannah,sequence,gradual,180,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,0.01999733397315051,10.0
+Hannah,sequence,gradual,181,Aftereffect,rl-gradient,"[618.0, 172.1923788646684]",-30,0.07248532910358474,10.0
+Hannah,sequence,gradual,182,Aftereffect,rl-gradient,"[618.0, 172.1923788646684]",-30,0.003303676794198296,10.0
+Hannah,sequence,gradual,183,Aftereffect,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.08410183148630201,10.0
+Hannah,sequence,gradual,184,Aftereffect,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.019590800689529342,10.0
+Hannah,sequence,gradual,185,Aftereffect,rl-gradient,"[618.0, 172.1923788646684]",-30,0.06134586583264534,10.0
+Hannah,sequence,gradual,186,Aftereffect,rl-gradient,"[618.0, 172.1923788646684]",-30,0.06265751993592117,10.0
+Hannah,sequence,gradual,187,Aftereffect,rl-gradient,"[618.0, 172.1923788646684]",-30,0.05577872905820902,10.0
+Hannah,sequence,gradual,188,Aftereffect,rl-gradient,"[618.0, 172.1923788646684]",-30,0.02324449758405267,10.0
+Hannah,sequence,gradual,189,Aftereffect,rl-gradient,"[618.0, 172.1923788646684]",-30,0.014077664909076137,10.0
+Hannah,sequence,gradual,190,Aftereffect,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.01627989184237766,10.0
+Hannah,sequence,gradual,191,Aftereffect,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.09843323969087381,10.0
+Hannah,sequence,gradual,192,Aftereffect,rl-gradient,"[618.0, 172.1923788646684]",-30,0.04187246887085028,10.0
+Hannah,sequence,gradual,193,Aftereffect,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.09881364861213404,10.0
+Hannah,sequence,gradual,194,Aftereffect,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.022834867579152096,10.0
+Hannah,sequence,gradual,195,Aftereffect,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.011252853479363445,10.0
+Hannah,sequence,gradual,196,Aftereffect,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.06675492079594614,10.0
+Hannah,sequence,gradual,197,Aftereffect,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.07165591676560279,10.0
+Hannah,sequence,gradual,198,Aftereffect,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.004235576794259011,10.0
+Hannah,sequence,gradual,199,Aftereffect,rl-gradient,"[618.0, 172.1923788646684]",-30,0.0011953438817697837,10.0
+Hannah,sequence,gradual,200,Aftereffect,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.044245268665141335,10.0
