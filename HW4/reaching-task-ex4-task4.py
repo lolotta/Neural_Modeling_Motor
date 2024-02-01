@@ -300,14 +300,15 @@ while running:
             gradual_step = np.min([np.ceil(gradual_attempts/3),10])
             perturbed_mouse_angle = mouse_angle + perturbation_lession - (gradual_step*perturbation_angle / 10)
             
-        elif (type(noise_types) == list) and (perturbation_type == 'tremor'):   
+        elif (type(noise_types) == list) and (perturbation_type == 'tremor'):  
+             
             if noise == 'no':
                 perturbation_tremor = 0
+                
             elif type(noise) == list:
-            
                 """ Draw a random number from a normal distribution with mean and std """
                 """ Weight the perturbation angles with a normal distribution """
-                angles = np.linspace(-math.pi/4, math.pi/4, 100)
+                angles = np.linspace(-math.pi/8, math.pi/8, 100)
                 """ Create  a normal distribution with mean and std """
                 weights = stats.norm.pdf(angles, noise[0], noise[1])
                 perturbation_tremor = rand.choices(angles, weights=weights, k=1)[0]
