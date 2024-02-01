@@ -68,7 +68,7 @@ target_mode = 'sequence'  # Mode for angular shift of target: random, fix, seque
 start_target=math.radians(START_ANGLE)
 sequence_target=START_ANGLE
 perturbation_mode= False
-perturbation_type= 'sudden' # Mode for angular shift of controll: random, gradual or sudden
+perturbation_type= 'tremor' # Mode for angular shift of controll: random, gradual or sudden
 perturbation_angle = math.radians(PERTURBATION_ANGLE)  # Angle between mouse_pos and circle_pos
 
 perturbed_mouse_angle = 0
@@ -186,7 +186,7 @@ while running:
         
         elif attempts == trial_number[1]:
             perturbation_mode = True
-            perturbation_type = 'sudden'
+            perturbation_type = 'tremor'
             sequence_target =  NEXT_ANGLES[0]
             noise = noise_types[0]
             feedback = feedbacks_types[2]
@@ -206,7 +206,7 @@ while running:
             
         elif attempts == trial_number[4]:
             perturbation_mode = True
-            perturbation_type = 'sudden'
+            perturbation_type = 'tremor'
             sequence_target =  NEXT_ANGLES[1]
             noise = noise_types[1]
             feedback = feedbacks_types[2]
@@ -226,7 +226,7 @@ while running:
             
         elif attempts == trial_number[7]:
             perturbation_mode = True
-            perturbation_type = 'sudden'
+            perturbation_type = 'tremor'
             sequence_target =  NEXT_ANGLES[2]
             noise = noise_types[2]
             feedback = feedbacks_types[2]
@@ -245,7 +245,7 @@ while running:
             
         elif attempts == trial_number[10]:
             perturbation_mode = True
-            perturbation_type = 'sudden'
+            perturbation_type = 'tremor'
             sequence_target =  NEXT_ANGLES[3]
             noise = noise_types[3]
             feedback = feedbacks_types[2]
