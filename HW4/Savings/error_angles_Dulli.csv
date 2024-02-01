@@ -1,21 +1,21 @@
-subject_name,target_mode,perturbation_type,trial_number,trial_name,target_pos,feedback,noise,changed_angels,error_angles,gradual_angels,lession_perturbed
-Dulli,sequence,sudden,1,No Perturbation,"[960.8362829059618, 202.1866670643066]",endpos,no,40,0.044778185232689616,0,0.0
-Dulli,sequence,sudden,2,Gradual Perturbation,"[960.8362829059618, 202.1866670643066]",endpos,no,40,0.530988734485839,0,0.0
-Dulli,sequence,sudden,3,Gradual Perturbation,"[960.8362829059618, 202.1866670643066]",endpos,no,40,0.4041130783932725,0,0.0
-Dulli,sequence,sudden,4,Gradual Perturbation,"[960.8362829059618, 202.1866670643066]",endpos,no,40,0.32020719137369646,0,0.0
-Dulli,sequence,sudden,5,Aftereffect,"[960.8362829059618, 202.1866670643066]",endpos,no,40,-0.03478497830462968,0,0.0
-Dulli,sequence,sudden,6,No Perturbation,"[618.0, 172.1923788646684]",endpos,"[0, 1]",-30,-0.10543917345138576,0,0.27766601736273433
-Dulli,sequence,sudden,7,Gradual Perturbation,"[618.0, 172.1923788646684]",endpos,"[0, 1]",-30,0.7107378259012767,0,-0.7377982747066938
-Dulli,sequence,sudden,8,Gradual Perturbation,"[618.0, 172.1923788646684]",endpos,"[0, 1]",-30,0.360333654795842,0,0.4521989425621673
-Dulli,sequence,sudden,9,Gradual Perturbation,"[618.0, 172.1923788646684]",endpos,"[0, 1]",-30,0.6457733037021343,0,-0.26179938779914935
-Dulli,sequence,sudden,10,Aftereffect,"[618.0, 172.1923788646684]",endpos,"[0, 1]",-30,0.006456666685083157,0,-0.4997988312529216
-Dulli,sequence,sudden,11,No Perturbation,"[1049.9077862357726, 329.3939570022994]",endpos,"[4, 1]",70,0.0811554279755261,0,0.055533203472546866
-Dulli,sequence,sudden,12,Gradual Perturbation,"[1049.9077862357726, 329.3939570022994]",endpos,"[4, 1]",70,0.5367367751293131,0,0.5156654608165065
-Dulli,sequence,sudden,13,Gradual Perturbation,"[1049.9077862357726, 329.3939570022994]",endpos,"[4, 1]",70,0.7133386163066293,0,0.03966657390896211
-Dulli,sequence,sudden,14,Gradual Perturbation,"[1049.9077862357726, 329.3939570022994]",endpos,"[4, 1]",70,0.2786284487550997,0,0.6108652381980153
-Dulli,sequence,sudden,15,Aftereffect,"[1049.9077862357726, 329.3939570022994]",endpos,"[4, 1]",70,0.03047650781121547,0,0.5791319790708458
-Dulli,sequence,sudden,16,No Perturbation,"[486.0922137642275, 329.3939570022994]",endpos,"[2, 1]",-70,0.16349376475113475,0,-0.4839322016893368
-Dulli,sequence,sudden,17,Gradual Perturbation,"[486.0922137642275, 329.3939570022994]",endpos,"[2, 1]",-70,0.419053301935858,0,0.737798274706694
-Dulli,sequence,sudden,18,Gradual Perturbation,"[486.0922137642275, 329.3939570022994]",endpos,"[2, 1]",-70,0.47729132689704157,0,0.7536649042702788
-Dulli,sequence,sudden,19,Gradual Perturbation,"[486.0922137642275, 329.3939570022994]",endpos,"[2, 1]",-70,nan,0,0.5949986086344305
-Dulli,sequence,sudden,20,Aftereffect,"[486.0922137642275, 329.3939570022994]",endpos,"[2, 1]",-70,0.4318074570021264,0,-0.21419949910839498
+subject_name,target_mode,perturbation_type,trial_number,trial_name,target_pos,feedback,noise,changed_angels,error_angles,gradual_angels,lession_perturbed,tremor_perturbed
+Dulli,sequence,tremor,1,No Perturbation,"[960.8362829059618, 202.1866670643066]",endpos,no,40,-0.02234033879245001,0.0,0.0,"['n', 'o']"
+Dulli,sequence,tremor,2,Gradual Perturbation,"[960.8362829059618, 202.1866670643066]",endpos,no,40,0.11330878434102842,1.0,0.0,"['n', 'o']"
+Dulli,sequence,tremor,3,Gradual Perturbation,"[960.8362829059618, 202.1866670643066]",endpos,no,40,-0.07189552876970173,1.0,0.0,"['n', 'o']"
+Dulli,sequence,tremor,4,Gradual Perturbation,"[960.8362829059618, 202.1866670643066]",endpos,no,40,0.06160756049159766,1.0,0.0,"['n', 'o']"
+Dulli,sequence,tremor,5,Aftereffect,"[960.8362829059618, 202.1866670643066]",endpos,no,40,0.034452187120062705,1.0,0.0,"['n', 'o']"
+Dulli,sequence,tremor,6,No Perturbation,"[618.0, 172.1923788646684]",endpos,"[0, 1]",-30,0.035337146809793385,1.0,-0.468065572125752,"[0, 1]"
+Dulli,sequence,tremor,7,Gradual Perturbation,"[618.0, 172.1923788646684]",endpos,"[0, 1]",-30,nan,1.0,-0.007933314781792378,"[0, 1]"
+Dulli,sequence,tremor,8,Gradual Perturbation,"[618.0, 172.1923788646684]",endpos,"[0, 1]",-30,nan,1.0,-0.07139983303613162,"[0, 1]"
+Dulli,sequence,tremor,9,Gradual Perturbation,"[618.0, 172.1923788646684]",endpos,"[0, 1]",-30,nan,1.0,-0.32526590605348865,"[0, 1]"
+Dulli,sequence,tremor,10,Aftereffect,"[618.0, 172.1923788646684]",endpos,"[0, 1]",-30,nan,1.0,-0.21419949910839498,"[0, 1]"
+Dulli,sequence,tremor,11,No Perturbation,"[1049.9077862357726, 329.3939570022994]",endpos,"[4, 1]",70,0.13488789229588455,1.0,0.5315320903800913,"[4, 1]"
+Dulli,sequence,tremor,12,Gradual Perturbation,"[1049.9077862357726, 329.3939570022994]",endpos,"[4, 1]",70,0.3840014346209343,1.0,0.3252659060534888,"[4, 1]"
+Dulli,sequence,tremor,13,Gradual Perturbation,"[1049.9077862357726, 329.3939570022994]",endpos,"[4, 1]",70,0.4151447690110614,1.0,0.7853981633974483,"[4, 1]"
+Dulli,sequence,tremor,14,Gradual Perturbation,"[1049.9077862357726, 329.3939570022994]",endpos,"[4, 1]",70,-0.003163048541606539,1.0,-0.08726646259971649,"[4, 1]"
+Dulli,sequence,tremor,15,Aftereffect,"[1049.9077862357726, 329.3939570022994]",endpos,"[4, 1]",70,-0.023381184781810116,1.0,0.7060650155795243,"[4, 1]"
+Dulli,sequence,tremor,16,No Perturbation,"[486.0922137642275, 329.3939570022994]",endpos,"[2, 1]",-70,-0.01796977369473396,1.0,0.4997988312529218,"[2, 1]"
+Dulli,sequence,tremor,17,Gradual Perturbation,"[486.0922137642275, 329.3939570022994]",endpos,"[2, 1]",-70,5.777840708691869,1.0,-0.2776660173627342,"[2, 1]"
+Dulli,sequence,tremor,18,Gradual Perturbation,"[486.0922137642275, 329.3939570022994]",endpos,"[2, 1]",-70,0.202577548239665,1.0,0.11899972172688611,"[2, 1]"
+Dulli,sequence,tremor,19,Gradual Perturbation,"[486.0922137642275, 329.3939570022994]",endpos,"[2, 1]",-70,5.885532338159804,1.0,0.1665996104176406,"[2, 1]"
+Dulli,sequence,tremor,20,Aftereffect,"[486.0922137642275, 329.3939570022994]",endpos,"[2, 1]",-70,0.010504499829193215,1.0,0.6901983860159395,"[2, 1]"

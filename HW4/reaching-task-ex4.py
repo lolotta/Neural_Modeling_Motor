@@ -301,12 +301,16 @@ while running:
             perturbed_mouse_angle = mouse_angle + perturbation_lession - (gradual_step*perturbation_angle / 10)
             
         elif (type(noise_types) == list) and (perturbation_type == 'tremor'):   
-            """ Draw a random number from a normal distribution with mean and std """
-            """ Weight the perturbation angles with a normal distribution """
-            angles = np.linspace(-math.pi/4, math.pi/4, 100)
-            """ Create  a normal distribution with mean and std """
-            weights = stats.norm.pdf(angles, noise[0], noise[1])
-            perturbation_tremor = rand.choices(angles, weights=weights, k=1)[0]
+            if noise == 'no':
+                perturbation_tremor = 0
+            elif type(noise) == list:
+            
+                """ Draw a random number from a normal distribution with mean and std """
+                """ Weight the perturbation angles with a normal distribution """
+                angles = np.linspace(-math.pi/4, math.pi/4, 100)
+                """ Create  a normal distribution with mean and std """
+                weights = stats.norm.pdf(angles, noise[0], noise[1])
+                perturbation_tremor = rand.choices(angles, weights=weights, k=1)[0]
             
             gradual_step = np.min([np.ceil(gradual_attempts/3),10])
             
@@ -400,7 +404,7 @@ while running:
 
     # Check if player moved to the center and generate new target
     if not new_target and at_start_position_and_generate_target(mouse_pos):
-        MASK_RADIUS = 0
+        MASK_RADIUS = 1 * TARGET_RADIUS
         new_target = generate_target_position()
         move_faster = False
         start_time = pygame.time.get_ticks()  # Start the timer for the attempt
