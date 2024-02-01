@@ -68,7 +68,7 @@ target_mode = 'sequence'  # Mode for angular shift of target: random, fix, seque
 start_target=math.radians(START_ANGLE)
 sequence_target=START_ANGLE
 perturbation_mode= False
-perturbation_type= 'sudden' # Mode for angular shift of controll: random, gradual or sudden
+perturbation_type= 'tremor' # Mode for angular shift of controll: random, gradual or sudden
 perturbation_angle = math.radians(PERTURBATION_ANGLE)  # Angle between mouse_pos and circle_pos
 
 perturbed_mouse_angle = 0
@@ -94,15 +94,17 @@ target_reached_bool = []
 exp_setup='noise + feedback'
 
 # give mean and std
-medium_noise = [0, 1]
+small_noise = [0, 1]
+medium_noise = [2, 1]
+large_noise = [4, 1]
 
-noise_types = [medium_noise, medium_noise]
-feedbacks_types = ['endpos', 'endpos']
+noise_types = ['no', small_noise, large_noise, medium_noise]
+feedbacks_types = ['endpos', 'endpos', 'endpos', 'endpos']
 
 """ Weight the perturbation angles with a normal distribution """
 angles = np.linspace(-math.pi/4, math.pi/4, 100)
 """ Create  a normal distribution with mean and std """
-weights = stats.norm.pdf(angles, medium_noise[0], medium_noise[1])
+weights = stats.norm.pdf(angles, small_noise[0], small_noise[1])
 perturbation_lession = rand.choices(angles, weights=weights, k=1)[0]
 
 # Function to generate a new target position
@@ -162,9 +164,11 @@ while running:
         # Design experiment A
         
         trial_number = [0, 20, 80, 100,
-                        120, 180, 200]
+                        120, 180, 200,
+                        220, 280, 300,
+                        320, 380, 400]
         
-        NEXT_ANGLES = [40, -30]
+        NEXT_ANGLES = [40, -30,  70, -70]
         
         """ Tripel every element and flatten the list """
         Collected_angels = sum([[i] * 3 for i in NEXT_ANGLES],[])
@@ -178,50 +182,90 @@ while running:
             perturbation_mode = False
             sequence_target =  NEXT_ANGLES[0]
             noise = noise_types[0]
-            feedback = feedbacks_types[1]
+            feedback = feedbacks_types[2]
         
         elif attempts == trial_number[1]:
             perturbation_mode = True
-            perturbation_type = 'sudden'
+            perturbation_type = 'tremor'
             sequence_target =  NEXT_ANGLES[0]
             noise = noise_types[0]
-            feedback = feedbacks_types[1]
+            feedback = feedbacks_types[2]
         
         elif attempts == trial_number[2]:
             perturbation_mode = False
             sequence_target =  NEXT_ANGLES[0]
             noise = noise_types[0]
-            feedback = feedbacks_types[1]
+            feedback = feedbacks_types[2]
             
             """ Block 1 """
         elif attempts == trial_number[3]:
             perturbation_mode = False
             sequence_target =  NEXT_ANGLES[1]
             noise = noise_types[1]
-            feedback = feedbacks_types[1]
+            feedback = feedbacks_types[2]
             
         elif attempts == trial_number[4]:
             perturbation_mode = True
-            perturbation_type = 'sudden'
+            perturbation_type = 'tremor'
             sequence_target =  NEXT_ANGLES[1]
             noise = noise_types[1]
-            feedback = feedbacks_types[1]
+            feedback = feedbacks_types[2]
             
         elif attempts == trial_number[5]:
             perturbation_mode = False
             sequence_target =  NEXT_ANGLES[1]
             noise = noise_types[1]
-            feedback = feedbacks_types[1]
-       
+            feedback = feedbacks_types[2]
+            
+            """ Block 2 """
+        elif attempts == trial_number[6]:
+            perturbation_mode = False
+            sequence_target =  NEXT_ANGLES[2]
+            noise = noise_types[2]
+            feedback = feedbacks_types[2]
+            
+        elif attempts == trial_number[7]:
+            perturbation_mode = True
+            perturbation_type = 'tremor'
+            sequence_target =  NEXT_ANGLES[2]
+            noise = noise_types[2]
+            feedback = feedbacks_types[2]
         
-        elif attempts >= trial_number[5]:
+        elif attempts == trial_number[8]:
+            perturbation_mode = False
+            sequence_target =  NEXT_ANGLES[2]
+            noise = noise_types[2]
+            
+            """ Block 3 """
+        elif attempts == trial_number[9]:
+            perturbation_mode = False
+            sequence_target =  NEXT_ANGLES[3]
+            noise = noise_types[3]
+            feedback = feedbacks_types[2]
+            
+        elif attempts == trial_number[10]:
+            perturbation_mode = True
+            perturbation_type = 'tremor'
+            sequence_target =  NEXT_ANGLES[3]
+            noise = noise_types[3]
+            feedback = feedbacks_types[2]
+        
+        elif attempts == trial_number[11]:
+            perturbation_mode = False
+            sequence_target =  NEXT_ANGLES[3]
+            noise = noise_types[3]
+            feedback = feedbacks_types[2]
+        
+        elif attempts >= trial_number[12]:
             running = False 
         
         
         """ Numbers of attempts for each perturbation type """
         number_attempts = np.array(trial_number[1:]) - np.array(trial_number[:-1])
         string_attempts = ['No Perturbation', 'Gradual Perturbation', 'Aftereffect',
-                           'No Perturbation', 'Sudden Perturbation', 'Aftereffect',]  
+                           'No Perturbation', 'Gradual Perturbation', 'Aftereffect',
+                           'No Perturbation', 'Gradual Perturbation', 'Aftereffect',
+                           'No Perturbation', 'Gradual Perturbation', 'Aftereffect']  
 
 
         
@@ -257,12 +301,16 @@ while running:
             perturbed_mouse_angle = mouse_angle + perturbation_lession - (gradual_step*perturbation_angle / 10)
             
         elif (type(noise_types) == list) and (perturbation_type == 'tremor'):   
-            """ Draw a random number from a normal distribution with mean and std """
-            """ Weight the perturbation angles with a normal distribution """
-            angles = np.linspace(-math.pi/4, math.pi/4, 100)
-            """ Create  a normal distribution with mean and std """
-            weights = stats.norm.pdf(angles, noise[0], noise[1])
-            perturbation_tremor = rand.choices(angles, weights=weights, k=1)[0]
+            if noise == 'no':
+                perturbation_tremor = 0
+            elif type(noise) == list:
+            
+                """ Draw a random number from a normal distribution with mean and std """
+                """ Weight the perturbation angles with a normal distribution """
+                angles = np.linspace(-math.pi/4, math.pi/4, 100)
+                """ Create  a normal distribution with mean and std """
+                weights = stats.norm.pdf(angles, noise[0], noise[1])
+                perturbation_tremor = rand.choices(angles, weights=weights, k=1)[0]
             
             gradual_step = np.min([np.ceil(gradual_attempts/3),10])
             
