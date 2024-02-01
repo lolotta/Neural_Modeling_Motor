@@ -94,10 +94,12 @@ target_reached_bool = []
 exp_setup='noise + feedback'
 
 # give mean and std
-medium_noise = [0, 1]
+small_noise = [0, 1]
+medium_noise = [2, 1]
+large_noise = [4, 1]
 
-noise_types = [medium_noise, medium_noise]
-feedbacks_types = ['endpos', 'endpos']
+noise_types = ['no', small_noise, large_noise, medium_noise]
+feedbacks_types = ['endpos', 'endpos', 'endpos', 'endpos']
 
 """ Weight the perturbation angles with a normal distribution """
 angles = np.linspace(-math.pi/4, math.pi/4, 100)
