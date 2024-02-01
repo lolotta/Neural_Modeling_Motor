@@ -25,7 +25,7 @@ CIRCLE_SIZE = 20
 TARGET_SIZE = CIRCLE_SIZE * 1.5
 TARGET_RADIUS = 300
 MASK_RADIUS = 1 * TARGET_RADIUS
-ATTEMPTS_LIMIT = 320
+ATTEMPTS_LIMIT = 400
 START_POSITION = (WIDTH // 2, HEIGHT // 2)
 START_ANGLE = 0
 PERTURBATION_ANGLE= 36 # in degrees
@@ -81,6 +81,7 @@ circle_angles = []
 target_pos = []
 gradual_angels = []
 lession_perturbed = []
+tremor_perturbed = []
 """ Create a 2d list for solving the trajoctories per attempt. """
 trajactory = [[] for i in range(ATTEMPTS_LIMIT)]
 
@@ -297,6 +298,18 @@ while running:
             gradual_step = np.min([np.ceil(gradual_attempts/3),10])
             perturbed_mouse_angle = mouse_angle + perturbation_lession - (gradual_step*perturbation_angle / 10)
             
+        elif (type(noise_types) == list) and (perturbation_type == 'tremor'):   
+            """ Draw a random number from a normal distribution with mean and std """
+            """ Weight the perturbation angles with a normal distribution """
+            angles = np.linspace(-math.pi/4, math.pi/4, 100)
+            """ Create  a normal distribution with mean and std """
+            weights = stats.norm.pdf(angles, noise[0], noise[1])
+            perturbation_tremor = rand.choices(angles, weights=weights, k=1)[0]
+            
+            gradual_step = np.min([np.ceil(gradual_attempts/3),10])
+            
+            perturbed_mouse_angle = mouse_angle + perturbation_tremor - (gradual_step*perturbation_angle / 10)
+            
         elif (type(noise_types) == list) and (perturbation_type == 'sudden'):
             perturbed_mouse_angle = mouse_angle + perturbation_angle + perturbation_lession
             
@@ -342,6 +355,7 @@ while running:
         error_angles.append(error_angle)
         gradual_angels.append(gradual_step)
         lession_perturbed.append(perturbation_lession)
+        tremor_perturbed.append([noise[0], noise[1]])
 
         new_target = None  # Set target to None to indicate hit
         start_time = 0  # Reset start_time after hitting the target
@@ -372,6 +386,7 @@ while running:
         error_angles.append(error_angle)
         gradual_angels.append(gradual_step)
         lession_perturbed.append(perturbation_lession)
+        tremor_perturbed.append([noise[0], noise[1]])
 
         new_target = None  # Set target to None to indicate miss
         start_time = 0  # Reset start_time after missing the target
@@ -518,6 +533,7 @@ if not test_mode:
             'error_angles': error_angles,
             'gradual_angels': gradual_angels,
             'lession_perturbed': lession_perturbed,
+            'tremor_perturbed': tremor_perturbed,
 
             }
 
