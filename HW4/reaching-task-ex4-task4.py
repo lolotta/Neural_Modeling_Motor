@@ -308,14 +308,17 @@ while running:
             elif type(noise) == list:
                 """ Draw a random number from a normal distribution with mean and std """
                 """ Weight the perturbation angles with a normal distribution """
-                angles = np.linspace(-math.pi/8, math.pi/8, 100)
+                distance_delta = math.hypot(mouse_pos[0], mouse_pos[1])
+                angles = np.linspace(-math.pi/(0.05 * (distance_delta)), math.pi/(0.05 * (distance_delta)), 100)
                 """ Create  a normal distribution with mean and std """
                 weights = stats.norm.pdf(angles, noise[0], noise[1])
                 perturbation_tremor = rand.choices(angles, weights=weights, k=1)[0]
             
             gradual_step = np.min([np.ceil(gradual_attempts/3),10])
             
-            perturbed_mouse_angle = mouse_angle + perturbation_tremor - (gradual_step*perturbation_angle / 10)
+            """ Normalize it with the distance of deltax and delty"""
+            
+            perturbed_mouse_angle = mouse_angle + (perturbation_tremor) - (gradual_step*perturbation_angle / 10)
             
         elif (type(noise_types) == list) and (perturbation_type == 'sudden'):
             perturbed_mouse_angle = mouse_angle + perturbation_angle + perturbation_lession
