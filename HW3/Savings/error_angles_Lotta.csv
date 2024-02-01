@@ -1,0 +1,81 @@
+subject_name,target_mode,perturbation_type,trial_number,trial_name,feedback_type,target_pos,changed_angels,error_angles,perturbed_angels
+Lotta,sequence,gradual,1,No Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.08161632740688207,0.0
+Lotta,sequence,gradual,2,No Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.1509227801180295,0.0
+Lotta,sequence,gradual,3,No Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,0.047287775476426486,0.0
+Lotta,sequence,gradual,4,No Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,0.062100152202419934,0.0
+Lotta,sequence,gradual,5,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.008945192270437885,1.0
+Lotta,sequence,gradual,6,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,0.1440600479487646,1.0
+Lotta,sequence,gradual,7,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.06143290788219402,1.0
+Lotta,sequence,gradual,8,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.06090418791147412,2.0
+Lotta,sequence,gradual,9,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.09563462612633022,2.0
+Lotta,sequence,gradual,10,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,0.0019241267708969279,2.0
+Lotta,sequence,gradual,11,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.10313416595802039,3.0
+Lotta,sequence,gradual,12,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.09180623931891296,3.0
+Lotta,sequence,gradual,13,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.03313238232312121,3.0
+Lotta,sequence,gradual,14,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.07253782329496938,4.0
+Lotta,sequence,gradual,15,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.007553489599443242,4.0
+Lotta,sequence,gradual,16,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,0.009538619233043555,4.0
+Lotta,sequence,gradual,17,Aftereffect,no,"[960.8362829059618, 202.1866670643066]",40,0.0371994066587078,4.0
+Lotta,sequence,gradual,18,Aftereffect,no,"[960.8362829059618, 202.1866670643066]",40,-0.012402189891445481,4.0
+Lotta,sequence,gradual,19,Aftereffect,no,"[960.8362829059618, 202.1866670643066]",40,0.03843313671997062,4.0
+Lotta,sequence,gradual,20,Aftereffect,no,"[960.8362829059618, 202.1866670643066]",40,-0.05914377864055975,4.0
+Lotta,sequence,gradual,21,No Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,0.03250141563743636,4.0
+Lotta,sequence,gradual,22,No Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,0.0287997739558854,4.0
+Lotta,sequence,gradual,23,No Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,0.009269966520037531,4.0
+Lotta,sequence,gradual,24,No Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,0.016193804773631637,4.0
+Lotta,sequence,gradual,25,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,-0.11756085800991745,5.0
+Lotta,sequence,gradual,26,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,0.03858796830173006,5.0
+Lotta,sequence,gradual,27,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,-0.2357086178023664,5.0
+Lotta,sequence,gradual,28,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,-0.15750637737815198,6.0
+Lotta,sequence,gradual,29,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,-0.1838398948145774,6.0
+Lotta,sequence,gradual,30,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,-0.07821295476582257,6.0
+Lotta,sequence,gradual,31,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,-0.23230379584423355,7.0
+Lotta,sequence,gradual,32,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,-0.13242403928189894,7.0
+Lotta,sequence,gradual,33,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,-0.013989320022694596,7.0
+Lotta,sequence,gradual,34,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,-0.2383041853010437,8.0
+Lotta,sequence,gradual,35,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,-0.10597878933559901,8.0
+Lotta,sequence,gradual,36,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,nan,8.0
+Lotta,sequence,gradual,37,Aftereffect,trajectory,"[618.0, 172.1923788646684]",-30,-0.04188511255652605,8.0
+Lotta,sequence,gradual,38,Aftereffect,trajectory,"[618.0, 172.1923788646684]",-30,0.06752677924868777,8.0
+Lotta,sequence,gradual,39,Aftereffect,trajectory,"[618.0, 172.1923788646684]",-30,0.022178443619126575,8.0
+Lotta,sequence,gradual,40,Aftereffect,trajectory,"[618.0, 172.1923788646684]",-30,0.07568836610274454,8.0
+Lotta,sequence,gradual,41,No Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-1.627002925015221,8.0
+Lotta,sequence,gradual,42,No Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.13616114216847042,8.0
+Lotta,sequence,gradual,43,No Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,0.1040871872720017,8.0
+Lotta,sequence,gradual,44,No Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.0002568772669906405,8.0
+Lotta,sequence,gradual,45,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.4294318629707453,9.0
+Lotta,sequence,gradual,46,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.26231417779733524,9.0
+Lotta,sequence,gradual,47,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.19305999100308768,9.0
+Lotta,sequence,gradual,48,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.2397995712719806,10.0
+Lotta,sequence,gradual,49,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.2412717083218352,10.0
+Lotta,sequence,gradual,50,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.09567770361039557,10.0
+Lotta,sequence,gradual,51,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.059318443908466745,10.0
+Lotta,sequence,gradual,52,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.20253680700709742,10.0
+Lotta,sequence,gradual,53,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.22844887505802935,10.0
+Lotta,sequence,gradual,54,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.28409245197337707,10.0
+Lotta,sequence,gradual,55,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.2592354360690906,10.0
+Lotta,sequence,gradual,56,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.1987706020641704,10.0
+Lotta,sequence,gradual,57,Aftereffect,endpos,"[1049.9077862357726, 329.3939570022994]",70,0.19053285254734856,10.0
+Lotta,sequence,gradual,58,Aftereffect,endpos,"[1049.9077862357726, 329.3939570022994]",70,0.21456921573570653,10.0
+Lotta,sequence,gradual,59,Aftereffect,endpos,"[1049.9077862357726, 329.3939570022994]",70,0.11189342995305201,10.0
+Lotta,sequence,gradual,60,Aftereffect,endpos,"[1049.9077862357726, 329.3939570022994]",70,0.03878706807599375,10.0
+Lotta,sequence,gradual,61,No Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,0.023225339257526567,10.0
+Lotta,sequence,gradual,62,No Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,nan,10.0
+Lotta,sequence,gradual,63,No Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,-0.150501865752805,10.0
+Lotta,sequence,gradual,64,No Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,0.0328299459812198,10.0
+Lotta,sequence,gradual,65,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,-0.31351210563352105,10.0
+Lotta,sequence,gradual,66,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,0.02541690751182446,10.0
+Lotta,sequence,gradual,67,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,-0.20813371961542626,10.0
+Lotta,sequence,gradual,68,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,-0.06454910459714935,10.0
+Lotta,sequence,gradual,69,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,-0.03537309003653388,10.0
+Lotta,sequence,gradual,70,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,-0.2683741378287696,10.0
+Lotta,sequence,gradual,71,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,-0.14794344854689956,10.0
+Lotta,sequence,gradual,72,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,-0.2703920723094464,10.0
+Lotta,sequence,gradual,73,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,-0.20384049214403865,10.0
+Lotta,sequence,gradual,74,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,-0.34153431008200763,10.0
+Lotta,sequence,gradual,75,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,-0.4371130202295006,10.0
+Lotta,sequence,gradual,76,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,-0.2884076384880194,10.0
+Lotta,sequence,gradual,77,Aftereffect,rl,"[665.3939570022994, 150.0922137642275]",-20,0.005010557208528166,10.0
+Lotta,sequence,gradual,78,Aftereffect,rl,"[665.3939570022994, 150.0922137642275]",-20,0.06840929340102608,10.0
+Lotta,sequence,gradual,79,Aftereffect,rl,"[665.3939570022994, 150.0922137642275]",-20,-0.18040691912969709,10.0
+Lotta,sequence,gradual,80,Aftereffect,rl,"[665.3939570022994, 150.0922137642275]",-20,0.03255085025863114,10.0

@@ -1,0 +1,401 @@
+subject_name,target_mode,perturbation_type,trial_number,trial_name,feedback_type,target_pos,changed_angels,error_angles,perturbed_angels
+Helenö,sequence,gradual,1,No Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,0.12760331589680285,0.0
+Helenö,sequence,gradual,2,No Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.15827368278144993,0.0
+Helenö,sequence,gradual,3,No Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,0.04100320017535963,0.0
+Helenö,sequence,gradual,4,No Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.040833832786880686,0.0
+Helenö,sequence,gradual,5,No Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.08810276231794567,0.0
+Helenö,sequence,gradual,6,No Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.0038268879462256544,0.0
+Helenö,sequence,gradual,7,No Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.029028833122705988,0.0
+Helenö,sequence,gradual,8,No Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.02743522590450087,0.0
+Helenö,sequence,gradual,9,No Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.09922043906750022,0.0
+Helenö,sequence,gradual,10,No Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.16674130052687697,0.0
+Helenö,sequence,gradual,11,No Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,nan,0.0
+Helenö,sequence,gradual,12,No Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,0.022480298719631198,0.0
+Helenö,sequence,gradual,13,No Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.02236248130163554,0.0
+Helenö,sequence,gradual,14,No Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.08793025773466656,0.0
+Helenö,sequence,gradual,15,No Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.04069862456704476,0.0
+Helenö,sequence,gradual,16,No Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.032527560153038815,0.0
+Helenö,sequence,gradual,17,No Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.0198731851425763,0.0
+Helenö,sequence,gradual,18,No Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,0.001899865175823634,0.0
+Helenö,sequence,gradual,19,No Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,0.04619368400926249,0.0
+Helenö,sequence,gradual,20,No Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,0.10071856591242212,0.0
+Helenö,sequence,gradual,21,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.012471726103977843,1.0
+Helenö,sequence,gradual,22,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.05323652895125264,1.0
+Helenö,sequence,gradual,23,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,0.04565885883098797,1.0
+Helenö,sequence,gradual,24,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,0.03925440197924446,2.0
+Helenö,sequence,gradual,25,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.0008277461202653713,2.0
+Helenö,sequence,gradual,26,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,0.005130136422802467,2.0
+Helenö,sequence,gradual,27,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,nan,3.0
+Helenö,sequence,gradual,28,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.17862537489701813,3.0
+Helenö,sequence,gradual,29,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.10476396661042575,3.0
+Helenö,sequence,gradual,30,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.06367154841788836,4.0
+Helenö,sequence,gradual,31,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.31165320552075015,4.0
+Helenö,sequence,gradual,32,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.21492936782774663,4.0
+Helenö,sequence,gradual,33,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.15492759434222791,5.0
+Helenö,sequence,gradual,34,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.057290186261134024,5.0
+Helenö,sequence,gradual,35,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.16998750195837342,5.0
+Helenö,sequence,gradual,36,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.26181309939667474,6.0
+Helenö,sequence,gradual,37,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.12985341677726336,6.0
+Helenö,sequence,gradual,38,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.17930969948227937,6.0
+Helenö,sequence,gradual,39,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.2632540454427492,7.0
+Helenö,sequence,gradual,40,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.09005365821912448,7.0
+Helenö,sequence,gradual,41,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.06970494091970492,7.0
+Helenö,sequence,gradual,42,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.08945715094368267,8.0
+Helenö,sequence,gradual,43,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.24387541809679902,8.0
+Helenö,sequence,gradual,44,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.15155102813313137,8.0
+Helenö,sequence,gradual,45,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.22925557036168787,9.0
+Helenö,sequence,gradual,46,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.20534142892480323,9.0
+Helenö,sequence,gradual,47,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.20223923861197712,9.0
+Helenö,sequence,gradual,48,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.8051761519443243,10.0
+Helenö,sequence,gradual,49,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,nan,10.0
+Helenö,sequence,gradual,50,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.42539183048622875,10.0
+Helenö,sequence,gradual,51,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.390720815999706,10.0
+Helenö,sequence,gradual,52,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.2643396359804804,10.0
+Helenö,sequence,gradual,53,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.23209340403338552,10.0
+Helenö,sequence,gradual,54,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.12188089904563737,10.0
+Helenö,sequence,gradual,55,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.17782572656593088,10.0
+Helenö,sequence,gradual,56,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.3453066613664526,10.0
+Helenö,sequence,gradual,57,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.2492456662949447,10.0
+Helenö,sequence,gradual,58,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.41916661724407134,10.0
+Helenö,sequence,gradual,59,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.3238033111374703,10.0
+Helenö,sequence,gradual,60,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.43835251227049743,10.0
+Helenö,sequence,gradual,61,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.369148196113098,10.0
+Helenö,sequence,gradual,62,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.45825862309738263,10.0
+Helenö,sequence,gradual,63,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.47122574211972346,10.0
+Helenö,sequence,gradual,64,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,nan,10.0
+Helenö,sequence,gradual,65,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.263229619428053,10.0
+Helenö,sequence,gradual,66,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.18630602027879828,10.0
+Helenö,sequence,gradual,67,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.23685486857843396,10.0
+Helenö,sequence,gradual,68,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.18371243333686693,10.0
+Helenö,sequence,gradual,69,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.2931742250149336,10.0
+Helenö,sequence,gradual,70,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.24780851024231842,10.0
+Helenö,sequence,gradual,71,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.19355386634333227,10.0
+Helenö,sequence,gradual,72,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.31864224074461633,10.0
+Helenö,sequence,gradual,73,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.4898525814578971,10.0
+Helenö,sequence,gradual,74,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.4203336781222389,10.0
+Helenö,sequence,gradual,75,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.2088770817110981,10.0
+Helenö,sequence,gradual,76,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.4048112251811302,10.0
+Helenö,sequence,gradual,77,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.23193774232645015,10.0
+Helenö,sequence,gradual,78,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.5989960824997538,10.0
+Helenö,sequence,gradual,79,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.13919577838963892,10.0
+Helenö,sequence,gradual,80,Gradual Perturbation,no,"[960.8362829059618, 202.1866670643066]",40,-0.07629678127252248,10.0
+Helenö,sequence,gradual,81,Aftereffect,no,"[960.8362829059618, 202.1866670643066]",40,0.17911258886445403,10.0
+Helenö,sequence,gradual,82,Aftereffect,no,"[960.8362829059618, 202.1866670643066]",40,-0.19165315912819825,10.0
+Helenö,sequence,gradual,83,Aftereffect,no,"[960.8362829059618, 202.1866670643066]",40,0.21981799489639064,10.0
+Helenö,sequence,gradual,84,Aftereffect,no,"[960.8362829059618, 202.1866670643066]",40,0.11404577361948254,10.0
+Helenö,sequence,gradual,85,Aftereffect,no,"[960.8362829059618, 202.1866670643066]",40,0.18457206900594325,10.0
+Helenö,sequence,gradual,86,Aftereffect,no,"[960.8362829059618, 202.1866670643066]",40,0.351779391491135,10.0
+Helenö,sequence,gradual,87,Aftereffect,no,"[960.8362829059618, 202.1866670643066]",40,0.1359006481047239,10.0
+Helenö,sequence,gradual,88,Aftereffect,no,"[960.8362829059618, 202.1866670643066]",40,-0.04299608943138378,10.0
+Helenö,sequence,gradual,89,Aftereffect,no,"[960.8362829059618, 202.1866670643066]",40,0.06855762701986201,10.0
+Helenö,sequence,gradual,90,Aftereffect,no,"[960.8362829059618, 202.1866670643066]",40,-0.13291457889598268,10.0
+Helenö,sequence,gradual,91,Aftereffect,no,"[960.8362829059618, 202.1866670643066]",40,0.17709336373739515,10.0
+Helenö,sequence,gradual,92,Aftereffect,no,"[960.8362829059618, 202.1866670643066]",40,0.18508412229505888,10.0
+Helenö,sequence,gradual,93,Aftereffect,no,"[960.8362829059618, 202.1866670643066]",40,0.03268888855003538,10.0
+Helenö,sequence,gradual,94,Aftereffect,no,"[960.8362829059618, 202.1866670643066]",40,0.09173071865684657,10.0
+Helenö,sequence,gradual,95,Aftereffect,no,"[960.8362829059618, 202.1866670643066]",40,-0.008796691198885931,10.0
+Helenö,sequence,gradual,96,Aftereffect,no,"[960.8362829059618, 202.1866670643066]",40,nan,10.0
+Helenö,sequence,gradual,97,Aftereffect,no,"[960.8362829059618, 202.1866670643066]",40,nan,10.0
+Helenö,sequence,gradual,98,Aftereffect,no,"[960.8362829059618, 202.1866670643066]",40,0.07095089415953326,10.0
+Helenö,sequence,gradual,99,Aftereffect,no,"[960.8362829059618, 202.1866670643066]",40,-0.016623553184228035,10.0
+Helenö,sequence,gradual,100,Aftereffect,no,"[960.8362829059618, 202.1866670643066]",40,0.035588378117286545,10.0
+Helenö,sequence,gradual,101,No Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,0.09507580681024397,10.0
+Helenö,sequence,gradual,102,No Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,-0.05167724235781934,10.0
+Helenö,sequence,gradual,103,No Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,0.11307690588211705,10.0
+Helenö,sequence,gradual,104,No Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,-0.05621474804389015,10.0
+Helenö,sequence,gradual,105,No Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,0.04713135612459185,10.0
+Helenö,sequence,gradual,106,No Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,-0.040878756964052076,10.0
+Helenö,sequence,gradual,107,No Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,-0.00283171000657223,10.0
+Helenö,sequence,gradual,108,No Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,0.09482074815228225,10.0
+Helenö,sequence,gradual,109,No Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,-0.06935020145850102,10.0
+Helenö,sequence,gradual,110,No Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,nan,10.0
+Helenö,sequence,gradual,111,No Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,-0.029777746008536887,10.0
+Helenö,sequence,gradual,112,No Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,0.02100982350045344,10.0
+Helenö,sequence,gradual,113,No Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,-0.04288248755389468,10.0
+Helenö,sequence,gradual,114,No Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,-0.07770091653681721,10.0
+Helenö,sequence,gradual,115,No Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,-0.048684598769721976,10.0
+Helenö,sequence,gradual,116,No Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,0.09349562615917106,10.0
+Helenö,sequence,gradual,117,No Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,0.0044526613517756886,10.0
+Helenö,sequence,gradual,118,No Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,0.10471892333354793,10.0
+Helenö,sequence,gradual,119,No Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,-0.05732430020857393,10.0
+Helenö,sequence,gradual,120,No Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,0.07275274320280944,10.0
+Helenö,sequence,gradual,121,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,-0.29176988150583405,10.0
+Helenö,sequence,gradual,122,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,-0.28235186555117764,10.0
+Helenö,sequence,gradual,123,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,-0.17219081452293938,10.0
+Helenö,sequence,gradual,124,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,-0.09772690735871903,10.0
+Helenö,sequence,gradual,125,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,-0.3062077646671262,10.0
+Helenö,sequence,gradual,126,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,-0.19379845306233712,10.0
+Helenö,sequence,gradual,127,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,-0.2016926481955048,10.0
+Helenö,sequence,gradual,128,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,-0.032561776935184916,10.0
+Helenö,sequence,gradual,129,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,-0.058564873701431264,10.0
+Helenö,sequence,gradual,130,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,-0.14999040306843892,10.0
+Helenö,sequence,gradual,131,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,-0.1496421665138068,10.0
+Helenö,sequence,gradual,132,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,0.1340595018559294,10.0
+Helenö,sequence,gradual,133,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,-0.3816787095178502,10.0
+Helenö,sequence,gradual,134,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,-0.2465786617615331,10.0
+Helenö,sequence,gradual,135,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,-0.20125158186926306,10.0
+Helenö,sequence,gradual,136,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,-0.05058970876938451,10.0
+Helenö,sequence,gradual,137,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,-0.31970137693703116,10.0
+Helenö,sequence,gradual,138,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,-0.07551403029796022,10.0
+Helenö,sequence,gradual,139,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,-0.09214753858768043,10.0
+Helenö,sequence,gradual,140,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,-0.22581168154335574,10.0
+Helenö,sequence,gradual,141,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,0.0,10.0
+Helenö,sequence,gradual,142,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,-0.17636615560367197,10.0
+Helenö,sequence,gradual,143,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,0.03628769412989685,10.0
+Helenö,sequence,gradual,144,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,-0.15509610599356627,10.0
+Helenö,sequence,gradual,145,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,-0.07652757170464186,10.0
+Helenö,sequence,gradual,146,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,-0.2936622099318673,10.0
+Helenö,sequence,gradual,147,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,-0.09154667384384574,10.0
+Helenö,sequence,gradual,148,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,0.009803607479295984,10.0
+Helenö,sequence,gradual,149,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,-0.26336188378778536,10.0
+Helenö,sequence,gradual,150,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,-0.006024023516170818,10.0
+Helenö,sequence,gradual,151,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,0.023407095446025927,10.0
+Helenö,sequence,gradual,152,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,-0.20412328709005312,10.0
+Helenö,sequence,gradual,153,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,-0.029792506827924115,10.0
+Helenö,sequence,gradual,154,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,0.03628769412989685,10.0
+Helenö,sequence,gradual,155,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,0.057628427477473654,10.0
+Helenö,sequence,gradual,156,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,0.03512931217118931,10.0
+Helenö,sequence,gradual,157,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,-0.027515989285454623,10.0
+Helenö,sequence,gradual,158,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,0.003412956031537906,10.0
+Helenö,sequence,gradual,159,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,0.036237905730635234,10.0
+Helenö,sequence,gradual,160,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,-0.2161635824687811,10.0
+Helenö,sequence,gradual,161,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,nan,10.0
+Helenö,sequence,gradual,162,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,-0.042458128734277345,10.0
+Helenö,sequence,gradual,163,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,0.022946791239352837,10.0
+Helenö,sequence,gradual,164,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,0.17367119834157352,10.0
+Helenö,sequence,gradual,165,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,-0.021144884354246773,10.0
+Helenö,sequence,gradual,166,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,-0.058574892737599527,10.0
+Helenö,sequence,gradual,167,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,-0.052240008451157394,10.0
+Helenö,sequence,gradual,168,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,-0.045869442390187753,10.0
+Helenö,sequence,gradual,169,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,-0.04688643347189991,10.0
+Helenö,sequence,gradual,170,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,0.015771562847951337,10.0
+Helenö,sequence,gradual,171,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,-0.04772492713080512,10.0
+Helenö,sequence,gradual,172,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,-0.008981794392023179,10.0
+Helenö,sequence,gradual,173,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,0.0,10.0
+Helenö,sequence,gradual,174,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,0.06360834155226724,10.0
+Helenö,sequence,gradual,175,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,-0.03831989063530106,10.0
+Helenö,sequence,gradual,176,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,-0.030293759918775365,10.0
+Helenö,sequence,gradual,177,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,-0.0033669906435078722,10.0
+Helenö,sequence,gradual,178,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,-0.01253852783144005,10.0
+Helenö,sequence,gradual,179,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,0.16933056626186183,10.0
+Helenö,sequence,gradual,180,Gradual Perturbation,trajectory,"[618.0, 172.1923788646684]",-30,0.038690360085493314,10.0
+Helenö,sequence,gradual,181,Aftereffect,trajectory,"[618.0, 172.1923788646684]",-30,0.31543732391613655,10.0
+Helenö,sequence,gradual,182,Aftereffect,trajectory,"[618.0, 172.1923788646684]",-30,0.23496240610808306,10.0
+Helenö,sequence,gradual,183,Aftereffect,trajectory,"[618.0, 172.1923788646684]",-30,0.07836268364608934,10.0
+Helenö,sequence,gradual,184,Aftereffect,trajectory,"[618.0, 172.1923788646684]",-30,0.16253101901578715,10.0
+Helenö,sequence,gradual,185,Aftereffect,trajectory,"[618.0, 172.1923788646684]",-30,0.16105453833379113,10.0
+Helenö,sequence,gradual,186,Aftereffect,trajectory,"[618.0, 172.1923788646684]",-30,-0.017968829793546526,10.0
+Helenö,sequence,gradual,187,Aftereffect,trajectory,"[618.0, 172.1923788646684]",-30,0.1925026988941665,10.0
+Helenö,sequence,gradual,188,Aftereffect,trajectory,"[618.0, 172.1923788646684]",-30,0.13949313388451423,10.0
+Helenö,sequence,gradual,189,Aftereffect,trajectory,"[618.0, 172.1923788646684]",-30,-0.017349545352762785,10.0
+Helenö,sequence,gradual,190,Aftereffect,trajectory,"[618.0, 172.1923788646684]",-30,-0.059986895542492036,10.0
+Helenö,sequence,gradual,191,Aftereffect,trajectory,"[618.0, 172.1923788646684]",-30,0.16259347217583597,10.0
+Helenö,sequence,gradual,192,Aftereffect,trajectory,"[618.0, 172.1923788646684]",-30,0.11703194900375724,10.0
+Helenö,sequence,gradual,193,Aftereffect,trajectory,"[618.0, 172.1923788646684]",-30,0.10377034088226789,10.0
+Helenö,sequence,gradual,194,Aftereffect,trajectory,"[618.0, 172.1923788646684]",-30,0.07161244556091395,10.0
+Helenö,sequence,gradual,195,Aftereffect,trajectory,"[618.0, 172.1923788646684]",-30,0.1272978432561287,10.0
+Helenö,sequence,gradual,196,Aftereffect,trajectory,"[618.0, 172.1923788646684]",-30,-0.018555829929317813,10.0
+Helenö,sequence,gradual,197,Aftereffect,trajectory,"[618.0, 172.1923788646684]",-30,0.07026007974373583,10.0
+Helenö,sequence,gradual,198,Aftereffect,trajectory,"[618.0, 172.1923788646684]",-30,0.04967252712525294,10.0
+Helenö,sequence,gradual,199,Aftereffect,trajectory,"[618.0, 172.1923788646684]",-30,0.03805685547471427,10.0
+Helenö,sequence,gradual,200,Aftereffect,trajectory,"[618.0, 172.1923788646684]",-30,0.00020640237192726119,10.0
+Helenö,sequence,gradual,201,No Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,nan,10.0
+Helenö,sequence,gradual,202,No Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,0.006041909978162452,10.0
+Helenö,sequence,gradual,203,No Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.03204112724188324,10.0
+Helenö,sequence,gradual,204,No Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.13800353625166628,10.0
+Helenö,sequence,gradual,205,No Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,0.042239560992308633,10.0
+Helenö,sequence,gradual,206,No Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.09549450276170512,10.0
+Helenö,sequence,gradual,207,No Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.03568292550424984,10.0
+Helenö,sequence,gradual,208,No Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.0519135927803806,10.0
+Helenö,sequence,gradual,209,No Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,nan,10.0
+Helenö,sequence,gradual,210,No Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.062227897078665106,10.0
+Helenö,sequence,gradual,211,No Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.05024898812865147,10.0
+Helenö,sequence,gradual,212,No Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.13978650392888203,10.0
+Helenö,sequence,gradual,213,No Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,0.022024340083822924,10.0
+Helenö,sequence,gradual,214,No Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.08622057089606855,10.0
+Helenö,sequence,gradual,215,No Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,0.024127209035066766,10.0
+Helenö,sequence,gradual,216,No Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.147249871003856,10.0
+Helenö,sequence,gradual,217,No Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.03803120420327111,10.0
+Helenö,sequence,gradual,218,No Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,0.05729596889303207,10.0
+Helenö,sequence,gradual,219,No Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.11318705936678741,10.0
+Helenö,sequence,gradual,220,No Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.04717349421165806,10.0
+Helenö,sequence,gradual,221,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.40725166621011377,10.0
+Helenö,sequence,gradual,222,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.40013416903545695,10.0
+Helenö,sequence,gradual,223,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.2296717829152506,10.0
+Helenö,sequence,gradual,224,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.2851901463733286,10.0
+Helenö,sequence,gradual,225,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,0.03004735752773363,10.0
+Helenö,sequence,gradual,226,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.2833726274731564,10.0
+Helenö,sequence,gradual,227,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.19413825605663793,10.0
+Helenö,sequence,gradual,228,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.16801835937899412,10.0
+Helenö,sequence,gradual,229,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.0008053697794697667,10.0
+Helenö,sequence,gradual,230,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.3858416828048875,10.0
+Helenö,sequence,gradual,231,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.24173925098179783,10.0
+Helenö,sequence,gradual,232,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.268715992185491,10.0
+Helenö,sequence,gradual,233,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.006637001949058585,10.0
+Helenö,sequence,gradual,234,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.12129175246270651,10.0
+Helenö,sequence,gradual,235,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.17756321895429594,10.0
+Helenö,sequence,gradual,236,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,0.06188563573100653,10.0
+Helenö,sequence,gradual,237,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.3557525443606351,10.0
+Helenö,sequence,gradual,238,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.34645233248246277,10.0
+Helenö,sequence,gradual,239,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.07987990463035133,10.0
+Helenö,sequence,gradual,240,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,0.07983513335383291,10.0
+Helenö,sequence,gradual,241,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.017063745746245085,10.0
+Helenö,sequence,gradual,242,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.15861070397551336,10.0
+Helenö,sequence,gradual,243,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.19076526560255247,10.0
+Helenö,sequence,gradual,244,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.0469403863188802,10.0
+Helenö,sequence,gradual,245,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,0.012267004692706363,10.0
+Helenö,sequence,gradual,246,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,0.03633199322600705,10.0
+Helenö,sequence,gradual,247,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.4306843077650364,10.0
+Helenö,sequence,gradual,248,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.3501250871496131,10.0
+Helenö,sequence,gradual,249,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.09800535349479111,10.0
+Helenö,sequence,gradual,250,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,0.21780721901608274,10.0
+Helenö,sequence,gradual,251,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.3257506153458736,10.0
+Helenö,sequence,gradual,252,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,0.10595204501227315,10.0
+Helenö,sequence,gradual,253,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.05611845483106659,10.0
+Helenö,sequence,gradual,254,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,0.10376673380567827,10.0
+Helenö,sequence,gradual,255,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.1905571945284753,10.0
+Helenö,sequence,gradual,256,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.1547986452778235,10.0
+Helenö,sequence,gradual,257,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.04901333490588705,10.0
+Helenö,sequence,gradual,258,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.09269717559807433,10.0
+Helenö,sequence,gradual,259,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.0903946846682619,10.0
+Helenö,sequence,gradual,260,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,0.03789909530930924,10.0
+Helenö,sequence,gradual,261,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,0.04170462567413702,10.0
+Helenö,sequence,gradual,262,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,0.040728878833083015,10.0
+Helenö,sequence,gradual,263,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.06896656913616367,10.0
+Helenö,sequence,gradual,264,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,0.1823790111522375,10.0
+Helenö,sequence,gradual,265,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.15499143907175916,10.0
+Helenö,sequence,gradual,266,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,0.019601067611773215,10.0
+Helenö,sequence,gradual,267,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.014403725985803695,10.0
+Helenö,sequence,gradual,268,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.28696005602962316,10.0
+Helenö,sequence,gradual,269,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.02978957847134417,10.0
+Helenö,sequence,gradual,270,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.039153469181711975,10.0
+Helenö,sequence,gradual,271,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.028424384029953287,10.0
+Helenö,sequence,gradual,272,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.004851700920230684,10.0
+Helenö,sequence,gradual,273,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,0.08038424861285781,10.0
+Helenö,sequence,gradual,274,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.14587835000480032,10.0
+Helenö,sequence,gradual,275,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.1713175021972384,10.0
+Helenö,sequence,gradual,276,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,0.06966387725797751,10.0
+Helenö,sequence,gradual,277,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.17139813922962066,10.0
+Helenö,sequence,gradual,278,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,0.11661494126849037,10.0
+Helenö,sequence,gradual,279,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.3044953376093701,10.0
+Helenö,sequence,gradual,280,Gradual Perturbation,endpos,"[1049.9077862357726, 329.3939570022994]",70,0.313890953914284,10.0
+Helenö,sequence,gradual,281,Aftereffect,endpos,"[1049.9077862357726, 329.3939570022994]",70,0.3930625972645681,10.0
+Helenö,sequence,gradual,282,Aftereffect,endpos,"[1049.9077862357726, 329.3939570022994]",70,0.26301688152957436,10.0
+Helenö,sequence,gradual,283,Aftereffect,endpos,"[1049.9077862357726, 329.3939570022994]",70,0.31074595976356517,10.0
+Helenö,sequence,gradual,284,Aftereffect,endpos,"[1049.9077862357726, 329.3939570022994]",70,0.1703091420503318,10.0
+Helenö,sequence,gradual,285,Aftereffect,endpos,"[1049.9077862357726, 329.3939570022994]",70,0.18010403607928463,10.0
+Helenö,sequence,gradual,286,Aftereffect,endpos,"[1049.9077862357726, 329.3939570022994]",70,0.2170940281821795,10.0
+Helenö,sequence,gradual,287,Aftereffect,endpos,"[1049.9077862357726, 329.3939570022994]",70,0.1516702905489851,10.0
+Helenö,sequence,gradual,288,Aftereffect,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.022333310386382643,10.0
+Helenö,sequence,gradual,289,Aftereffect,endpos,"[1049.9077862357726, 329.3939570022994]",70,0.13820093197342603,10.0
+Helenö,sequence,gradual,290,Aftereffect,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.002590315404539467,10.0
+Helenö,sequence,gradual,291,Aftereffect,endpos,"[1049.9077862357726, 329.3939570022994]",70,0.08637250508615674,10.0
+Helenö,sequence,gradual,292,Aftereffect,endpos,"[1049.9077862357726, 329.3939570022994]",70,nan,10.0
+Helenö,sequence,gradual,293,Aftereffect,endpos,"[1049.9077862357726, 329.3939570022994]",70,0.10799953037783869,10.0
+Helenö,sequence,gradual,294,Aftereffect,endpos,"[1049.9077862357726, 329.3939570022994]",70,0.21531263632531988,10.0
+Helenö,sequence,gradual,295,Aftereffect,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.018349005347682135,10.0
+Helenö,sequence,gradual,296,Aftereffect,endpos,"[1049.9077862357726, 329.3939570022994]",70,0.138190714859761,10.0
+Helenö,sequence,gradual,297,Aftereffect,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.012067950565374186,10.0
+Helenö,sequence,gradual,298,Aftereffect,endpos,"[1049.9077862357726, 329.3939570022994]",70,0.12226700234497997,10.0
+Helenö,sequence,gradual,299,Aftereffect,endpos,"[1049.9077862357726, 329.3939570022994]",70,-0.027040115072351434,10.0
+Helenö,sequence,gradual,300,Aftereffect,endpos,"[1049.9077862357726, 329.3939570022994]",70,0.03796348986031184,10.0
+Helenö,sequence,gradual,301,No Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,0.1478776412243359,10.0
+Helenö,sequence,gradual,302,No Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,0.02087761669713628,10.0
+Helenö,sequence,gradual,303,No Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,0.03936290585640956,10.0
+Helenö,sequence,gradual,304,No Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,-0.028464345024672433,10.0
+Helenö,sequence,gradual,305,No Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,-0.09268744747916213,10.0
+Helenö,sequence,gradual,306,No Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,0.07794417488740102,10.0
+Helenö,sequence,gradual,307,No Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,0.14288758036695381,10.0
+Helenö,sequence,gradual,308,No Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,0.0930640117232795,10.0
+Helenö,sequence,gradual,309,No Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,0.049118693901923915,10.0
+Helenö,sequence,gradual,310,No Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,0.06630989290685974,10.0
+Helenö,sequence,gradual,311,No Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,0.1174197305661473,10.0
+Helenö,sequence,gradual,312,No Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,nan,10.0
+Helenö,sequence,gradual,313,No Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,0.07343641201673479,10.0
+Helenö,sequence,gradual,314,No Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,0.05010619550964801,10.0
+Helenö,sequence,gradual,315,No Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,0.09239637151369462,10.0
+Helenö,sequence,gradual,316,No Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,0.054448510186754895,10.0
+Helenö,sequence,gradual,317,No Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,-0.09716697358521498,10.0
+Helenö,sequence,gradual,318,No Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,-0.14687596039550876,10.0
+Helenö,sequence,gradual,319,No Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,-0.006570033901894146,10.0
+Helenö,sequence,gradual,320,No Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,0.03151695194909543,10.0
+Helenö,sequence,gradual,321,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,-0.41106324862394605,10.0
+Helenö,sequence,gradual,322,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,-0.08185050391745086,10.0
+Helenö,sequence,gradual,323,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,0.7047587438775573,10.0
+Helenö,sequence,gradual,324,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,-0.4187191954652001,10.0
+Helenö,sequence,gradual,325,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,-0.13894924597221103,10.0
+Helenö,sequence,gradual,326,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,-0.1322129312200453,10.0
+Helenö,sequence,gradual,327,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,-0.03943848675007766,10.0
+Helenö,sequence,gradual,328,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,0.029811354142248225,10.0
+Helenö,sequence,gradual,329,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,nan,10.0
+Helenö,sequence,gradual,330,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,0.12036458138107187,10.0
+Helenö,sequence,gradual,331,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,0.04908822638829968,10.0
+Helenö,sequence,gradual,332,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,0.13366267216156147,10.0
+Helenö,sequence,gradual,333,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,0.02019952510065237,10.0
+Helenö,sequence,gradual,334,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,0.034583257699801306,10.0
+Helenö,sequence,gradual,335,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,nan,10.0
+Helenö,sequence,gradual,336,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,nan,10.0
+Helenö,sequence,gradual,337,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,0.1364653554061077,10.0
+Helenö,sequence,gradual,338,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,0.047650944687747554,10.0
+Helenö,sequence,gradual,339,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,-0.01639599910759837,10.0
+Helenö,sequence,gradual,340,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,-0.02315748146540675,10.0
+Helenö,sequence,gradual,341,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,-0.045798977750307834,10.0
+Helenö,sequence,gradual,342,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,0.020925903695591774,10.0
+Helenö,sequence,gradual,343,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,0.14224254586635499,10.0
+Helenö,sequence,gradual,344,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,0.13244037978971668,10.0
+Helenö,sequence,gradual,345,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,0.11352252185119283,10.0
+Helenö,sequence,gradual,346,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,0.10913100957588906,10.0
+Helenö,sequence,gradual,347,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,0.09257651156649271,10.0
+Helenö,sequence,gradual,348,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,0.01208138123203284,10.0
+Helenö,sequence,gradual,349,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,0.0007334508036480614,10.0
+Helenö,sequence,gradual,350,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,-0.039596315031595664,10.0
+Helenö,sequence,gradual,351,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,0.07624697814118253,10.0
+Helenö,sequence,gradual,352,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,0.1701906099306405,10.0
+Helenö,sequence,gradual,353,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,0.13721796251054363,10.0
+Helenö,sequence,gradual,354,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,-0.07324142440882087,10.0
+Helenö,sequence,gradual,355,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,-0.012210695882777678,10.0
+Helenö,sequence,gradual,356,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,-0.003343684243430234,10.0
+Helenö,sequence,gradual,357,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,0.1178441144174367,10.0
+Helenö,sequence,gradual,358,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,-0.11558490567654389,10.0
+Helenö,sequence,gradual,359,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,0.23915628807943023,10.0
+Helenö,sequence,gradual,360,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,0.1251328670006846,10.0
+Helenö,sequence,gradual,361,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,-0.13187589045087278,10.0
+Helenö,sequence,gradual,362,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,0.042017379776656094,10.0
+Helenö,sequence,gradual,363,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,0.06188563573100647,10.0
+Helenö,sequence,gradual,364,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,-0.01105648702873907,10.0
+Helenö,sequence,gradual,365,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,0.05936147296757466,10.0
+Helenö,sequence,gradual,366,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,0.037018703133299136,10.0
+Helenö,sequence,gradual,367,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,0.05618363052869446,10.0
+Helenö,sequence,gradual,368,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,-0.05760837661501328,10.0
+Helenö,sequence,gradual,369,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,-0.07291051420431383,10.0
+Helenö,sequence,gradual,370,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,0.14203632841297043,10.0
+Helenö,sequence,gradual,371,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,0.03086246399033432,10.0
+Helenö,sequence,gradual,372,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,-0.052623910283476016,10.0
+Helenö,sequence,gradual,373,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,0.06358085721057827,10.0
+Helenö,sequence,gradual,374,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,0.0486784942979861,10.0
+Helenö,sequence,gradual,375,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,nan,10.0
+Helenö,sequence,gradual,376,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,-0.11190864982728344,10.0
+Helenö,sequence,gradual,377,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,0.14721762919720938,10.0
+Helenö,sequence,gradual,378,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,0.28773916885045225,10.0
+Helenö,sequence,gradual,379,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,-0.12836114292362866,10.0
+Helenö,sequence,gradual,380,Gradual Perturbation,rl,"[665.3939570022994, 150.0922137642275]",-20,0.08983182503294151,10.0
+Helenö,sequence,gradual,381,Aftereffect,rl,"[665.3939570022994, 150.0922137642275]",-20,0.22389586010752893,10.0
+Helenö,sequence,gradual,382,Aftereffect,rl,"[665.3939570022994, 150.0922137642275]",-20,0.19144391256697757,10.0
+Helenö,sequence,gradual,383,Aftereffect,rl,"[665.3939570022994, 150.0922137642275]",-20,0.12299746240498166,10.0
+Helenö,sequence,gradual,384,Aftereffect,rl,"[665.3939570022994, 150.0922137642275]",-20,0.11327529011515924,10.0
+Helenö,sequence,gradual,385,Aftereffect,rl,"[665.3939570022994, 150.0922137642275]",-20,0.07655677255162119,10.0
+Helenö,sequence,gradual,386,Aftereffect,rl,"[665.3939570022994, 150.0922137642275]",-20,0.010149600247712609,10.0
+Helenö,sequence,gradual,387,Aftereffect,rl,"[665.3939570022994, 150.0922137642275]",-20,-0.06315655058396463,10.0
+Helenö,sequence,gradual,388,Aftereffect,rl,"[665.3939570022994, 150.0922137642275]",-20,-0.012924124645490087,10.0
+Helenö,sequence,gradual,389,Aftereffect,rl,"[665.3939570022994, 150.0922137642275]",-20,-0.04377832603203169,10.0
+Helenö,sequence,gradual,390,Aftereffect,rl,"[665.3939570022994, 150.0922137642275]",-20,-0.09691054963656431,10.0
+Helenö,sequence,gradual,391,Aftereffect,rl,"[665.3939570022994, 150.0922137642275]",-20,0.07556755126804315,10.0
+Helenö,sequence,gradual,392,Aftereffect,rl,"[665.3939570022994, 150.0922137642275]",-20,0.05321623824044308,10.0
+Helenö,sequence,gradual,393,Aftereffect,rl,"[665.3939570022994, 150.0922137642275]",-20,-0.02841206837669885,10.0
+Helenö,sequence,gradual,394,Aftereffect,rl,"[665.3939570022994, 150.0922137642275]",-20,-0.02132784349716066,10.0
+Helenö,sequence,gradual,395,Aftereffect,rl,"[665.3939570022994, 150.0922137642275]",-20,0.03051017331079864,10.0
+Helenö,sequence,gradual,396,Aftereffect,rl,"[665.3939570022994, 150.0922137642275]",-20,0.03973701732417867,10.0
+Helenö,sequence,gradual,397,Aftereffect,rl,"[665.3939570022994, 150.0922137642275]",-20,0.04676013253829292,10.0
+Helenö,sequence,gradual,398,Aftereffect,rl,"[665.3939570022994, 150.0922137642275]",-20,0.04384271660494421,10.0
+Helenö,sequence,gradual,399,Aftereffect,rl,"[665.3939570022994, 150.0922137642275]",-20,0.014329013082051034,10.0
+Helenö,sequence,gradual,400,Aftereffect,rl,"[665.3939570022994, 150.0922137642275]",-20,0.09140957807389105,10.0

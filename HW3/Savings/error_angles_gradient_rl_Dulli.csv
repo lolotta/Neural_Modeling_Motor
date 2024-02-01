@@ -1,0 +1,21 @@
+subject_name,target_mode,perturbation_type,trial_number,trial_name,feedback_type,target_pos,changed_angels,error_angles,perturbed_angels
+Dulli,sequence,gradual,1,No Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.02811284479821241,0.0
+Dulli,sequence,gradual,2,No Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.07891491668531536,0.0
+Dulli,sequence,gradual,3,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.044231465670914516,1.0
+Dulli,sequence,gradual,4,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,0.08281510320938601,1.0
+Dulli,sequence,gradual,5,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.229695300592359,1.0
+Dulli,sequence,gradual,6,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.09747842556594233,2.0
+Dulli,sequence,gradual,7,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.09505482961706857,2.0
+Dulli,sequence,gradual,8,Gradual Perturbation,rl,"[960.8362829059618, 202.1866670643066]",40,-0.12306593095191132,2.0
+Dulli,sequence,gradual,9,Aftereffect,rl,"[960.8362829059618, 202.1866670643066]",40,-0.0867141735865451,2.0
+Dulli,sequence,gradual,10,Aftereffect,rl,"[960.8362829059618, 202.1866670643066]",40,-0.11169526668222518,2.0
+Dulli,sequence,gradual,11,No Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.032939395292029605,2.0
+Dulli,sequence,gradual,12,No Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.03568641069395628,2.0
+Dulli,sequence,gradual,13,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,0.43963697006215163,3.0
+Dulli,sequence,gradual,14,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,0.037831137877512244,3.0
+Dulli,sequence,gradual,15,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.21452839503314847,3.0
+Dulli,sequence,gradual,16,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.2620791750388296,4.0
+Dulli,sequence,gradual,17,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.16408584685288696,4.0
+Dulli,sequence,gradual,18,Gradual Perturbation,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.15933331388633798,4.0
+Dulli,sequence,gradual,19,Aftereffect,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.12556977881209797,4.0
+Dulli,sequence,gradual,20,Aftereffect,rl-gradient,"[618.0, 172.1923788646684]",-30,-0.01790532294547642,4.0
