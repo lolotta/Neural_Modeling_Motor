@@ -13,7 +13,7 @@ import scipy.stats as stats
 # Subject name
 subject_name = "Dulli"
 # Game parameters
-experimenter = "Flo"
+experimenter = "Lotta"
 if experimenter == "Lotta":
     SCREEN_X, SCREEN_Y = 1920, 1080 # your screen resolution
     WIDTH, HEIGHT = SCREEN_X // 1.25  , SCREEN_Y // 1.25 # be aware of monitor scaling on windows (150%)
@@ -22,7 +22,7 @@ elif experimenter == "Flo":
     SCREEN_X, SCREEN_Y = 3840, 2160 # your screen resolution
     WIDTH, HEIGHT = SCREEN_X // 2.5  , SCREEN_Y // 2.5 # be aware of monitor scaling on windows (150%)
 CIRCLE_SIZE = 20
-TARGET_SIZE = CIRCLE_SIZE
+TARGET_SIZE = CIRCLE_SIZE * 1.5
 TARGET_RADIUS = 300
 MASK_RADIUS = 1 * TARGET_RADIUS
 ATTEMPTS_LIMIT = 320
@@ -272,7 +272,7 @@ while running:
     mouse_pos = pygame.mouse.get_pos()
     
     if new_target:
-        trajactory[attempts] += [mouse_pos]
+        trajactory[attempts] += [circle_pos]
 
     # Calculate distance from START_POSITION to mouse_pos
     deltax = mouse_pos[0] - START_POSITION[0]
@@ -424,7 +424,7 @@ while running:
         if feedback == 'trajectory':
             draw_old_trajactory(trajactory, attempts, screen)
         elif feedback == 'endpos':
-            pygame.draw.circle(screen, WHITE, trajactory[attempts-1][-1], CIRCLE_SIZE // 2)
+            pygame.draw.circle(screen, GREY, trajactory[attempts-1][-1], CIRCLE_SIZE // 2)
         
 # Generate playing field
     # Draw current target
