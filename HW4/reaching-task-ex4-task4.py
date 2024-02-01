@@ -94,17 +94,15 @@ target_reached_bool = []
 exp_setup='noise + feedback'
 
 # give mean and std
-small_noise = [0, 1]
-medium_noise = [2, 1]
-large_noise = [4, 1]
+medium_noise = [0, 1]
 
-noise_types = ['no', small_noise, large_noise, medium_noise]
-feedbacks_types = ['endpos', 'endpos', 'endpos', 'endpos']
+noise_types = [medium_noise, medium_noise]
+feedbacks_types = ['endpos', 'endpos']
 
 """ Weight the perturbation angles with a normal distribution """
 angles = np.linspace(-math.pi/4, math.pi/4, 100)
 """ Create  a normal distribution with mean and std """
-weights = stats.norm.pdf(angles, small_noise[0], small_noise[1])
+weights = stats.norm.pdf(angles, medium_noise[0], medium_noise[1])
 perturbation_lession = rand.choices(angles, weights=weights, k=1)[0]
 
 # Function to generate a new target position
@@ -164,11 +162,9 @@ while running:
         # Design experiment A
         
         trial_number = [0, 20, 80, 100,
-                        120, 180, 200,
-                        220, 280, 300,
-                        320, 380, 400]
+                        120, 180, 200]
         
-        NEXT_ANGLES = [40, -30,  70, -70]
+        NEXT_ANGLES = [40, -30]
         
         """ Tripel every element and flatten the list """
         Collected_angels = sum([[i] * 3 for i in NEXT_ANGLES],[])
@@ -182,90 +178,50 @@ while running:
             perturbation_mode = False
             sequence_target =  NEXT_ANGLES[0]
             noise = noise_types[0]
-            feedback = feedbacks_types[2]
+            feedback = feedbacks_types[1]
         
         elif attempts == trial_number[1]:
             perturbation_mode = True
             perturbation_type = 'sudden'
             sequence_target =  NEXT_ANGLES[0]
             noise = noise_types[0]
-            feedback = feedbacks_types[2]
+            feedback = feedbacks_types[1]
         
         elif attempts == trial_number[2]:
             perturbation_mode = False
             sequence_target =  NEXT_ANGLES[0]
             noise = noise_types[0]
-            feedback = feedbacks_types[2]
+            feedback = feedbacks_types[1]
             
             """ Block 1 """
         elif attempts == trial_number[3]:
             perturbation_mode = False
             sequence_target =  NEXT_ANGLES[1]
             noise = noise_types[1]
-            feedback = feedbacks_types[2]
+            feedback = feedbacks_types[1]
             
         elif attempts == trial_number[4]:
             perturbation_mode = True
             perturbation_type = 'sudden'
             sequence_target =  NEXT_ANGLES[1]
             noise = noise_types[1]
-            feedback = feedbacks_types[2]
+            feedback = feedbacks_types[1]
             
         elif attempts == trial_number[5]:
             perturbation_mode = False
             sequence_target =  NEXT_ANGLES[1]
             noise = noise_types[1]
-            feedback = feedbacks_types[2]
-            
-            """ Block 2 """
-        elif attempts == trial_number[6]:
-            perturbation_mode = False
-            sequence_target =  NEXT_ANGLES[2]
-            noise = noise_types[2]
-            feedback = feedbacks_types[2]
-            
-        elif attempts == trial_number[7]:
-            perturbation_mode = True
-            perturbation_type = 'sudden'
-            sequence_target =  NEXT_ANGLES[2]
-            noise = noise_types[2]
-            feedback = feedbacks_types[2]
+            feedback = feedbacks_types[1]
+       
         
-        elif attempts == trial_number[8]:
-            perturbation_mode = False
-            sequence_target =  NEXT_ANGLES[2]
-            noise = noise_types[2]
-            
-            """ Block 3 """
-        elif attempts == trial_number[9]:
-            perturbation_mode = False
-            sequence_target =  NEXT_ANGLES[3]
-            noise = noise_types[3]
-            feedback = feedbacks_types[2]
-            
-        elif attempts == trial_number[10]:
-            perturbation_mode = True
-            perturbation_type = 'sudden'
-            sequence_target =  NEXT_ANGLES[3]
-            noise = noise_types[3]
-            feedback = feedbacks_types[2]
-        
-        elif attempts == trial_number[11]:
-            perturbation_mode = False
-            sequence_target =  NEXT_ANGLES[3]
-            noise = noise_types[3]
-            feedback = feedbacks_types[2]
-        
-        elif attempts >= trial_number[11]:
+        elif attempts >= trial_number[5]:
             running = False 
         
         
         """ Numbers of attempts for each perturbation type """
         number_attempts = np.array(trial_number[1:]) - np.array(trial_number[:-1])
         string_attempts = ['No Perturbation', 'Gradual Perturbation', 'Aftereffect',
-                           'No Perturbation', 'Gradual Perturbation', 'Aftereffect',
-                           'No Perturbation', 'Gradual Perturbation', 'Aftereffect',
-                           'No Perturbation', 'Gradual Perturbation', 'Aftereffect']  
+                           'No Perturbation', 'Sudden Perturbation', 'Aftereffect',]  
 
 
         
@@ -400,7 +356,7 @@ while running:
 
     # Check if player moved to the center and generate new target
     if not new_target and at_start_position_and_generate_target(mouse_pos):
-        MASK_RADIUS = 0
+        MASK_RADIUS = 1 * TARGET_RADIUS
         new_target = generate_target_position()
         move_faster = False
         start_time = pygame.time.get_ticks()  # Start the timer for the attempt

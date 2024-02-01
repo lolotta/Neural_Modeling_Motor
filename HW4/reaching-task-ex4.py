@@ -256,7 +256,7 @@ while running:
             noise = noise_types[3]
             feedback = feedbacks_types[2]
         
-        elif attempts >= trial_number[11]:
+        elif attempts >= trial_number[12]:
             running = False 
         
         
