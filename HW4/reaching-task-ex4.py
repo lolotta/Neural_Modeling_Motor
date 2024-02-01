@@ -165,7 +165,7 @@ while running:
                         220, 280, 300,
                         320, 380, 400]
         
-        NEXT_ANGLES = [40, -30,  70, -20]
+        NEXT_ANGLES = [40, -30,  70, -70]
         
         """ Tripel every element and flatten the list """
         Collected_angels = sum([[i] * 3 for i in NEXT_ANGLES],[])
