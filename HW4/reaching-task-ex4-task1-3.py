@@ -186,7 +186,7 @@ while running:
         
         elif attempts == trial_number[1]:
             perturbation_mode = True
-            perturbation_type = 'tremor'
+            perturbation_type = 'sudden'
             sequence_target =  NEXT_ANGLES[0]
             noise = noise_types[0]
             feedback = feedbacks_types[2]
@@ -206,7 +206,7 @@ while running:
             
         elif attempts == trial_number[4]:
             perturbation_mode = True
-            perturbation_type = 'tremor'
+            perturbation_type = 'sudden'
             sequence_target =  NEXT_ANGLES[1]
             noise = noise_types[1]
             feedback = feedbacks_types[2]
@@ -226,7 +226,7 @@ while running:
             
         elif attempts == trial_number[7]:
             perturbation_mode = True
-            perturbation_type = 'tremor'
+            perturbation_type = 'sudden'
             sequence_target =  NEXT_ANGLES[2]
             noise = noise_types[2]
             feedback = feedbacks_types[2]
@@ -245,7 +245,7 @@ while running:
             
         elif attempts == trial_number[10]:
             perturbation_mode = True
-            perturbation_type = 'tremor'
+            perturbation_type = 'sudden'
             sequence_target =  NEXT_ANGLES[3]
             noise = noise_types[3]
             feedback = feedbacks_types[2]
